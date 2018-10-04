@@ -1,8 +1,8 @@
 import React from 'react';
+import './Navbar.css';
 
 const Navbar = () => (
 <Navbar> 
-
 <Navbar.Header>
     <Navbar.Brand>
       <a href="#home">Byte</a>
@@ -14,10 +14,16 @@ const Navbar = () => (
     </NavItem>
     <NavItem eventKey={2} href="#">
       About
-    </NavItem>
+    </NavItem>  
     <NavItem eventKey={3} href="#">
       Meet the Team
     </NavItem>
+    <Navbar.Form pullRight>
+      <FormGroup>
+        <FormControl type="text" placeholder="Search" />
+      </FormGroup>{' '}
+      <Button type="submit">Submit</Button>
+    </Navbar.Form>
   </Nav>
 </Navbar>
 

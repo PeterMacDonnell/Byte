@@ -1,8 +1,9 @@
-  import React, { Component } from 'react';
+  import React from 'react';
   // import logo from '/bigByte.png';
+  import Modal from './Components/Modal/Modal'
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
@@ -10,9 +11,11 @@ class App extends Component {
          
           <h1 className="App-title"></h1>
         </header>
-      
+        <Modal />
       </div>
+     
     );
+    
   }
 }
 
