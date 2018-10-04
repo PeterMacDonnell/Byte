@@ -24,10 +24,10 @@ class Modal extends React.Component {
     render() {
       const popover = (
         <Popover id="modal-popover" title="popover">
-          very popover. such engagement
+          very popoverish. such engagement. 
         </Popover>
       );
-      const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+      const tooltip = <Tooltip id="modal-tooltip">wow. this is called a tooltip</Tooltip>;
   
       return (
         <div>
