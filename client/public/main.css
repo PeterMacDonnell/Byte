@@ -24,3 +24,25 @@ text-align: center;
 .btn-danger {
     float: right;
 }
+
+.navbar{ 
+    background-image: none; 
+}
+
+.my-nav {
+    background-color: #D0DE4B !important;
+    border-color: #E7E7E7 !important;
+}
+
+.my-nav-font {
+color: black !important;    
+
+}
+
+.my-btn-yes{
+    background-color: #D0DE4B !important;
+}
+
+.my-btn-no{
+    background-color: #F6422B !important;
+}
