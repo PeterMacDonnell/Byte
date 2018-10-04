@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.imgur.com/ImJLuu9.jpg",
+        "name": "Alex Connolly",
+        "LinkedIn": "",
+        "GitHub": ""
+    },
+    {
+        "id": 2,
+        "image": "https://i.imgur.com/ofRaIp8.jpg",
+        "name": "Grace Houghton Andrizzi",
+        "LinkedIn": "",
+        "GitHub": ""
+    },
+    {
+        "id": 3,
+        "image": "https://i.imgur.com/D30BDWZ.jpg",
+        "name": "Peter MacDonnell",
+        "LinkedIn": "",
+        "GitHub": ""
+    },
+    {
+        "id": 4,
+        "image": "https://i.imgur.com/LeiPpyI.jpg",
+        "name": "Crystal Ngo",
+        "LinkedIn": "",
+        "GitHub": ""
+    },
+    {
+        "id": 5,
+        "image": "https://i.imgur.com/dJbTXgS.jpg",
+        "name": "Brogan Stich",
+        "LinkedIn": "",
+        "GitHub": ""
+    }
+]
