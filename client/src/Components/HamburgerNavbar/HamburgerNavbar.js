@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, NavbarBrand, NavbarToggler, Collapse, NavbarNav, NavItem, NavLink } from 'react-bootstrap';
+import { Button, Container, NavbarBrand, NavbarToggler, Collapse, Navbar, NavItem, NavLink } from 'react-bootstrap';
 
 
 
@@ -41,7 +41,7 @@ color="green lighten-4" style={{marginTop: '20px'}} light>
       </span>
     </NavbarToggler>
     <Collapse id="navbarCollapse13" isOpen={this.state.collapseID} navbar>
-      <NavbarNav Right>
+      <Navbar Right>
         <NavItem active>
           <NavLink to="#!">Home</NavLink>
         </NavItem>
@@ -51,7 +51,7 @@ color="green lighten-4" style={{marginTop: '20px'}} light>
         <NavItem>
           <NavLink to="#!">Meet the Team</NavLink>
         </NavItem>
-      </NavbarNav>
+      </Navbar>
     </Collapse>
   </Container>
 </NavbarHamburger>
