@@ -1,7 +1,9 @@
 import React from 'react';
 import './Navbar.css';
+import { Button, Container, NavbarBrand, NavbarToggler, Collapse, Navbar, NavItem, NavLink, Nav, FormGroup, FormControl } from 'react-bootstrap';
 
-const Navbar = () => (
+
+const Nav_bar = () => (
 <Navbar> 
 <Navbar.Header>
     <Navbar.Brand>
@@ -29,7 +31,7 @@ const Navbar = () => (
 
 );
 
-export default NavBar;
+export default Nav_bar;
 
       
       

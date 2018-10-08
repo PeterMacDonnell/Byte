@@ -1,5 +1,7 @@
 // import React from 'react';
+
 // import { Button, Container, NavbarBrand, NavbarToggler, Collapse, NavbarNav, NavItem, NavLink } from 'react-bootstrap';
+
 
 
 
@@ -26,6 +28,7 @@
 //     render() {
 //         return (
   
+
 
 // <div>
 // <NavbarHamburger show={this.state.show} onHide={this.handleClose}>
@@ -59,6 +62,39 @@
 // )
 // }
 // };
+
+
+// <Navbar color="green lighten-4" style={{marginTop: '20px'}} light>
+//     <NavbarBrand>
+//       Byte
+//     </NavbarBrand>
+//     <NavbarToggler tag="button" className="aqua-gradient" onClick={this.toggleCollapse('navbarCollapse13')}>
+//       <span className="white-text">
+//         <React.Fa icon="bars" />
+//       </span>
+//     </NavbarToggler>
+//     <Collapse id="navbarCollapse13" isOpen={this.state.collapseID} navbar>
+//       <Navbar Right>
+//       <NavItem eventKey={1} href="#">
+//         Home
+//       </NavItem>
+//       <NavItem eventKey={2} href="#">
+//         Cant Remember
+//       </NavItem>
+//       <NavItem eventKey={3} href="#">
+//         Meet the Team
+//       </NavItem>
+//     </Collapse>
+
+
+//     </Navbar>
+
+//  </NavbarHamburger>
+
+// )
+// }
+// };
+
 
 
 // export default NavbarHamburger;
