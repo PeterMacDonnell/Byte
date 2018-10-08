@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const users = new Schema({
     //not sure what to fill this in with considering google oauth
-  restName: { type: String, required: true }
+    userId: { type: String, required: true},
+    //Not sure what else this table needs
   
 
 });
