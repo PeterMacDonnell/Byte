@@ -1,0 +1,50 @@
+
+.bg-light {
+    background-color: #D0DE4B;
+    color: #000000;
+}
+body {
+    background-color:#FFFFFF;
+    
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: solid 5px #FD9B6E;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    margin: 20px;
+    /* float: left; */
+}
+
+
+h5.card-title {
+color: #F6422B;
+font-weight: bold;
+text-align: center;
+}
+
+.btn-danger {
+    float: right;
+}
+
+.navbar{ 
+    background-image: none; 
+}
+
+.my-nav {
+    background-color: #D0DE4B !important;
+    border-color: #E7E7E7 !important;
+}
+
+.my-nav-font {
+color: black !important;    
+
+}
+
+.my-btn-yes{
+    background-color: #D0DE4B !important;
+}
+
+.my-btn-no{
+    background-color: #F6422B !important;
+}
