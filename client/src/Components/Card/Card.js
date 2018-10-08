@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = props =>
     <div className="col-md-6 col-lg-3">
-      <div className="card mb-3">
+      <div className="card mb-8">
         <img className="card-img-top" src={`img/${props.restaurant.image}.jpg`} alt="Card image cap"/>
         <div className="card-body">
           <h5 className="card-title text-center">Whoa. You got a byte!</h5>

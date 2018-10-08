@@ -2,6 +2,7 @@
   // import logo from '/bigByte.png';
   import Modal from './Components/Modal/Modal';
   import HamburgerNavbar from './Components/HamburgerNavbar/HamburgerNavbar';
+import login from './Components/Login/Login';
 
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
           <h1 className="App-title"> hi </h1>
         </header>
         <Modal />
+        <login />
       </div>
      
     );
