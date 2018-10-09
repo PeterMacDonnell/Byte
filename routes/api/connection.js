@@ -3,7 +3,7 @@ const controller = require("");
 
 // Boilerplate routing stuff from old activities
 router.route("/")
-  .get()
+  .get(controller.findById);
   .post();
 
 
