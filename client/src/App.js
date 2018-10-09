@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
+import NavBar from "./Components/Navbar/Navbar";
+import Choice from "./Components/Choice/Choice";
+import Match from "./Components/Match/Match";
 
 
 const App = () => (
@@ -17,7 +20,11 @@ const App = () => (
         </Switch>
       </div>
     </Router>
+    <NavBar />
+    <Choice />
+    <Match /> 
       </Grid>
+  
   </DocumentTitle>
 );
 
