@@ -4,7 +4,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const io = require('socket.io').listen(PORT)
+var server = require('http').createServer(app)
+var io = require('socket.io')(server);
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,8 +24,14 @@ mongoose.connect(
     useMongoClient: true
   }
 );
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+})
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
 
 // Start the API server
-app.listen(PORT, function() {
+server.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
