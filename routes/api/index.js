@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const ItemRoutes = require("./first");
+const Routes = require("./");
 
-// Item routes
-router.use("/first", ItemRoutes);
+// Boilerplate code for routing
+router.use("/", Routes);
 
 module.exports = router;
