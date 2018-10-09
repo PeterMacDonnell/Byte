@@ -1,18 +1,25 @@
 {
-  "name": "byte",
+  "name": "byte_app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
-    "passport-google-oauth": "^1.0.0",
-    "react": "^16.5.2",
-    "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.5.2",
-    "react-scripts": "1.1.5"
+    "axios": "^0.16.2",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.32.3",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "1.0.14",
+    "react-syntax-highlighter": "^8.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "redux": "^4.0.0"
   }
 }
