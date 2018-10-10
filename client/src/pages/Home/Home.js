@@ -5,9 +5,9 @@ import React, { Component } from "react";
 class All extends Component {
   render(){
     return(
-      <h1>Welcome to my App!</h1>
-      
-      
+
+      <h1>this is home.js</h1>
+
     )
   }
 }

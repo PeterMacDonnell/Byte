@@ -1,12 +1,12 @@
 import React from "react";
 import './Login.css';
 
-var Login = React.createClass({
-  render: function() {
+
+class Login extends React.Component{
+  render () {
     return (
 
       <div className="card" style={{width: '100rem'}}>
-        <img className="card-img-top" src="http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg" alt="Card image cap" />
         <div className="card-body">
           <h5 className="card-title">Hiya!</h5>
           <p className="card-text">
@@ -30,6 +30,6 @@ var Login = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default Login;
