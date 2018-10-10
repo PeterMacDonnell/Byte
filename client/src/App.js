@@ -8,6 +8,7 @@ import {Col,Row,Grid} from "react-bootstrap";
 import NavBar from "./Components/Navbar/Navbar";
 import Choice from "./Components/Choice/Choice";
 import Match from "./Components/Match/Match.js";
+import Login from "./Components/Login/Login.js";
 
 
 const App = () => (
@@ -24,6 +25,8 @@ const App = () => (
     </Router>
     <NavBar />
     <Choice />
+    <Login />
+    
     {/* <Form /> */}
     {/* <Match />  */}
   </Grid>
