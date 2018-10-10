@@ -22,7 +22,7 @@ const App = () => (
     </Router>
     <NavBar />
     <Choice />
-    <Form />
+    {/* <Form /> */}
     {/* <Match />  */}
       </Grid>
   
