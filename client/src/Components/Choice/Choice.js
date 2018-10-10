@@ -1,8 +1,10 @@
 import React from "react";
+import axios from "axios";
+import{ firebase } from "../../firebase/index";
 import './Choice.css';
 
 class Choice extends React.Component {
-      render() {
+      frender() {
         return (
               // const {restaurant} = this.props
     

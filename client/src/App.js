@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
-import{ firebase } from "./firebase/index";
 import NavBar from "./Components/Navbar/Navbar";
 import Choice from "./Components/Choice/Choice";
 import Match from "./Components/Match/Match";

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Match.css';
+
+
 class Match extends React.Component {
   render () {
     // const {restaurant} = this.props.whatever;
@@ -23,9 +25,9 @@ class Match extends React.Component {
           <p className="card-text"> A place that serves up hella hot dogs</p>
         </div>  
       </div>
-    </div>;
-  // }
-// }
-    )};
+    </div>
+    )
+  };
+}
 
     export default Match;
