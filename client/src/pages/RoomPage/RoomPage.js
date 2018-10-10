@@ -11,15 +11,23 @@ export default class roomPage extends React.Component {
     const location_input = "berkeley"
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4"
 
-    axios.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=+"+food_input+"+in+"+location_input+"+&key="+api_key)
+    axios.get("https://cors-anywhere.herokuapp.com/" + "https://maps.googleapis.com/maps/api/place/textsearch/json?query=+"+food_input+"+in+"+location_input+"+&key="+api_key)
       .then(res => {
-        const array_of_places = res.data;
-        this.setState({ array_of_places });
+        console.log(res.data.results);
+        const array_of_places = res.data.results;
+        this.setState({ array_of_places })
+        console.log(this.state);
       })
   }
   render() {
+    // const {places} = this.state;
     return (
-        <p>array_of_places{this.state.array_of_places.map(place=><li>{place.name}</li>)}</p>
-    )
+      <div>
+          <h2>array_of_places</h2>
+          <div>
+          {this.state.array_of_places.map(place=>(<li>{place.name}</li>))}
+          </div>
+        </div>
+    );
   }
-}
+};
