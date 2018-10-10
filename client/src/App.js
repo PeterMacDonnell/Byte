@@ -6,7 +6,7 @@ import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
 import NavBar from "./Components/Navbar/Navbar";
 import Choice from "./Components/Choice/Choice";
-import Match from "./Components/Match/Match";
+import Match from "./Components/Match/Match.js";
 
 
 const App = () => (
@@ -22,7 +22,7 @@ const App = () => (
     </Router>
     <NavBar />
     <Choice />
-    <Match /> 
+    {/* <Match />  */}
       </Grid>
   
   </DocumentTitle>
