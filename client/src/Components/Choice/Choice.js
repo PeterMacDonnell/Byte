@@ -4,7 +4,7 @@ import{ firebase } from "../../firebase/index";
 import './Choice.css';
 
 class Choice extends React.Component {
-      frender() {
+      render() {
         return (
               // const {restaurant} = this.props
     
