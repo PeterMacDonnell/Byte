@@ -4,10 +4,11 @@ import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
+import{ firebase } from "./firebase/index";
 
 
 const App = () => (
-  <DocumentTitle title="My Mern App">
+  <DocumentTitle title="Byte App">
   <Grid>
     <Router>
       <div>
