@@ -24,6 +24,7 @@ const App = () => (
     </Router>
     <NavBar />
     <Choice />
+    <Form />
     {/* <Match />  */}
   </Grid>
   
