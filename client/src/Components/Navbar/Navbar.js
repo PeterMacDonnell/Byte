@@ -3,58 +3,58 @@ import './Navbar.css';
 import { Button, Container, NavbarBrand, NavbarToggler, Collapse, Navbar, NavItem, NavLink, Nav, FormGroup, FormControl } from 'react-bootstrap';
 
 
-const NavBar = () => (
-<Navbar> 
-<Navbar.Header>
-    <Navbar.Brand>
-      <a href="#home">Byte</a>
-    </Navbar.Brand>
-  </Navbar.Header>
-  <Nav>
-    <NavItem eventKey={1} href="#">
-      Home
-    </NavItem>
-    <NavItem eventKey={2} href="#">
-      About
-    </NavItem>  
-    <NavItem eventKey={3} href="#">
-      Meet the Team
-    </NavItem>
-    <Navbar.Form pullRight>
-      <FormGroup>
-        <FormControl type="text" placeholder="Search" />
-      </FormGroup>{' '}
-      <Button type="submit">Submit</Button>
-    </Navbar.Form>
-  </Nav>
-</Navbar>
+// const NavBar = () => (
+// <Navbar> 
+// <Navbar.Header>
+//     <Navbar.Brand>
+//       <a href="#home">Byte</a>
+//     </Navbar.Brand>
+//   </Navbar.Header>
+//   <Nav>
+//     <NavItem eventKey={1} href="#">
+//       Home
+//     </NavItem>
+//     <NavItem eventKey={2} href="#">
+//       About
+//     </NavItem>  
+//     <NavItem eventKey={3} href="#">
+//       Meet the Team
+//     </NavItem>
+//     <Navbar.Form pullRight>
+//       <FormGroup>
+//         <FormControl type="text" placeholder="Search" />
+//       </FormGroup>{' '}
+//       <Button type="submit">Submit</Button>
+//     </Navbar.Form>
+//   </Nav>
+// </Navbar>
 
-);
+// );
 
-// var Navbar = React.createClass({
-//   render: function() {
-//     return (
+class NavBar extends React.Component{
+  render() {
+    return (
 
-//       <nav className="navbar navbar-expand-lg navbar-light bg-light my-nav">
-//         <a className="navbar-brand" href="#">Byte</a>
-//         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-//           <span className="navbar-toggler-icon" />
-//         </button>
-//         <div className="collapse navbar-collapse my-nav-font" id="navbarNavAltMarkup">
-//           <div className="navbar-nav ml-auto">
-//             <a className="nav-item nav-link active my-nav-font" href="#">Home <span className="sr-only">(current)</span></a>
-//             <a className="nav-item nav-link my-nav-font" href="#">About</a>
-//             <a className="nav-item nav-link my-nav-font" href="#">Meet the Team</a>
-//             <form className="form-inline my-2 my-lg-0">
-//               <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-//               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-//             </form>
-//           </div>
-//         </div>
-//       </nav>
-//     );
-//   }
-// });
+      <nav className="navbar navbar-expand-lg navbar-light bg-light my-nav">
+        <a className="navbar-brand" href="#">Byte</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse my-nav-font" id="navbarNavAltMarkup">
+          <div className="navbar-nav ml-auto">
+            <a className="nav-item nav-link active my-nav-font" href="#">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-item nav-link my-nav-font" href="#">About</a>
+            <a className="nav-item nav-link my-nav-font" href="#">Meet the Team</a>
+            <form className="form-inline my-2 my-lg-0">
+              <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+};
 
 export default NavBar;
 
