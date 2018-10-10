@@ -1,5 +1,5 @@
 import React from 'react';
-import './Match.css';
+import './match.css';
 
 
 class Match extends React.Component {
@@ -26,7 +26,6 @@ class Match extends React.Component {
         </div>  
       </div>
     </div>
-
     )
   };
 }
