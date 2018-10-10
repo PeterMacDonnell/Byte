@@ -1,5 +1,7 @@
 import React from 'react';
 import './Match.css';
+
+
 class Match extends React.Component {
   render () {
     // const {restaurant} = this.props.whatever;
@@ -24,9 +26,10 @@ class Match extends React.Component {
         </div>  
       </div>
     </div>
-  // }
-// }
-    }
+
+    )
   };
+}
+
 
     export default Match;

@@ -10,7 +10,7 @@ import Match from "./Components/Match/Match.js";
 
 
 const App = () => (
-  <DocumentTitle title="My Mern App">
+  <DocumentTitle title="Byte App">
   <Grid>
     <Router>
       <div>
