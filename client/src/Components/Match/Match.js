@@ -5,7 +5,7 @@ import './Match.css';
 class Match extends React.Component {
   render () {
     // const {restaurant} = this.props.whatever;
-    return  (
+    return  
 // const Match = props =>
     <div className="col-md-6 col-lg-3">
       <div className="card mb-3">
@@ -26,8 +26,10 @@ class Match extends React.Component {
         </div>  
       </div>
     </div>
+
     )
   };
 }
+
 
     export default Match;
