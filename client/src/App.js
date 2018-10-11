@@ -9,6 +9,7 @@ import NavBar from "./Components/Navbar/Navbar";
 import Choice from "./Components/Choice/Choice";
 import Match from "./Components/Match/Match.js";
 import Login from "./Components/Login/Login.js";
+import Modal from "./Components/Modal/Modal.js";
 
 
 
@@ -23,14 +24,9 @@ const App = () => (
           <Route component={NoMatch}/>
         </Switch>
       </div>
-    </Router>
-    <NavBar />
-  
-    <Login />
-    
-    {/* <Form /> */}
-    {/* <Match />  */}
+    </Router>  
   </Grid>
+  <Modal />
   
   </DocumentTitle>
 );

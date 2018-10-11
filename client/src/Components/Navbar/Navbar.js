@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import { Button, Container, NavbarBrand, NavbarToggler, Collapse, Navbar, NavItem, NavLink, Nav, FormGroup, FormControl } from 'react-bootstrap';
 
-class NavBar extends React.Component{
+export default class NavBar extends React.Component{
   render() {
     return (
 
@@ -27,7 +27,7 @@ class NavBar extends React.Component{
   }
 };
 
-export default NavBar;
+
 
       
       

@@ -26,17 +26,12 @@ export default class Choice extends React.Component {
     console.log(more)
   }
 
-
-  // https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,rating,formatted_phone_number&key=YOUR_API_KEY
-
   render() {
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
     return (
-          
       <Container> 
       <Row >
           {this.state.array_of_places.map(place=>(
-      
       <Col size="3">
            <div className="card wholecard" style={{width: '18rem', height: '30rem'}}>
             <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
@@ -49,13 +44,13 @@ export default class Choice extends React.Component {
             </div>
           </div>
         </Col>
-       
       ))}
        </Row>
         </Container>
-    );
+    )
   }
 };
+
 
 // //CARD
 // var CardContainer = React.createClass({
