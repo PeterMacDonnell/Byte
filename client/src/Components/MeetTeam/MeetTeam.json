@@ -1,36 +1,41 @@
 [
     {
         "id": 1,
-        "image": "https://i.imgur.com/ImJLuu9.jpg",
+        "image": "https://i.imgur.com/63Yii7R.jpg",
         "name": "Alex Connolly",
+        "quote": "",
         "LinkedIn": "https://www.linkedin.com/in/alexrconnolly/",
         "GitHub": "https://github.com/AlexanderConnolly415"
     },
     {
         "id": 2,
-        "image": "https://i.imgur.com/ofRaIp8.jpg",
+        "image": "https://i.imgur.com/cJFRBjP.jpg",
         "name": "Grace Houghton Andrizzi",
+        "quote": "",
         "LinkedIn": "https://www.linkedin.com/in/grace-houghton/",
         "GitHub": "https://github.com/adorkwithaspork"
     },
     {
         "id": 3,
-        "image": "https://i.imgur.com/D30BDWZ.jpg",
+        "image": "https://i.imgur.com/SDtXLQy.jpg",
         "name": "Peter MacDonnell",
+        "quote": "",
         "LinkedIn": "https://www.linkedin.com/in/petermacdonnell/",
         "GitHub": "https://github.com/PeterMacDonnell"
     },
     {
         "id": 4,
-        "image": "https://i.imgur.com/LeiPpyI.jpg",
+        "image": "https://i.imgur.com/wwaDj9I.jpg",
         "name": "Crystal Ngo",
+        "quote": "",
         "LinkedIn": "https://linkedin.com/in/ngocrystal",
         "GitHub": "https://github.com/crystalngo88"
     },
     {
         "id": 5,
-        "image": "https://i.imgur.com/dJbTXgS.jpg",
+        "image": "https://i.imgur.com/er9gMyi.jpg",
         "name": "Brogan Stich",
+        "quote": "",
         "LinkedIn": "https://www.linkedin.com/in/brogan-stich-9a9697165",
         "GitHub": "https://github.com/ad-victoriam-101"
     }
