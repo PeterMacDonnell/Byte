@@ -1,5 +1,5 @@
 import React from 'react';
-import './match.css';
+import './Match';
 
 
 class Match extends React.Component {

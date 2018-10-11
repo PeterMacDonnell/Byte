@@ -1,3 +1,4 @@
+export default{
 // GET /auth/google
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  The first step in Google authentication will involve
@@ -16,3 +17,4 @@ app.get('/auth/google/callback',
   function(req, res) {
     res.redirect('/');
   });
+}

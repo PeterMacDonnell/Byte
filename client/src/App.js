@@ -11,6 +11,7 @@ import Match from "./Components/Match/Match.js";
 import Login from "./Components/Login/Login.js";
 
 
+
 const App = () => (
   <DocumentTitle title="Byte App">
   <Grid>
@@ -24,7 +25,7 @@ const App = () => (
       </div>
     </Router>
     <NavBar />
-    <Choice />
+  
     <Login />
     
     {/* <Form /> */}
