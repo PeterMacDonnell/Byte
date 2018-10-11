@@ -25,7 +25,7 @@ const App = () => (
       </div>
     </Router>
     <NavBar />
-    <Choice />
+  
     <Login />
     
     {/* <Form /> */}

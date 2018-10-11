@@ -21,7 +21,7 @@ export default class Choice extends React.Component {
         this.setState({ array_of_places })
       })
   }
-  getData() {
+  getData(){
     const more = this.state.array_of_places;
     console.log(more)
   }
@@ -32,13 +32,12 @@ export default class Choice extends React.Component {
   render() {
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
     return (
+          
       <Container> 
-        <div>
-          <h2>array_of_places</h2>
-        </div>
+      <Row >
           {this.state.array_of_places.map(place=>(
-      <Row-lg-12>
-      <Col-md-3>
+      
+      <Col size="3">
            <div className="card wholecard" style={{width: '18rem', height: '30rem'}}>
             <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
             <div className="card-body">
@@ -49,9 +48,10 @@ export default class Choice extends React.Component {
               <a href="should be a 0" className="btn btn-danger">No</a>
             </div>
           </div>
-        </Col-md-3>
-        </Row-lg-12>
+        </Col>
+       
       ))}
+       </Row>
         </Container>
     );
   }

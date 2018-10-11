@@ -37,14 +37,15 @@
   }
   
   .wholecard {
-    float: left;
+    float: left !important;
     overflow: hidden;
-    margin: 2px;
+    margin: 3px !important;
     border-radius: 10px;
     padding: 20px;
     border-spacing: 10px;
     width: auto;
-    margin-left: 10px;
+		margin-left: 10px;
+		margin-bottom: 15px !important;
     
   }
   .card-img-top {
@@ -76,10 +77,15 @@ img {
 	background-color: #f5f5f5;
 }
 
+@media (min-width: 1200px) {
+.container {
+    max-width: 1400px !important;
+}
+}
 
 /* Custom page CSS - MOBILE first */
 body > .container {
-  padding: 60px 15px 0;
+  /* padding: 60px 15px 0; */
 }
 
 .container .text-muted {
