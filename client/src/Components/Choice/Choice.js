@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import{ firebase } from "../../firebase/index";
 import './Choice.css';
+import {Col, Container, Row} from '../Grid/index';
 
 export default class Choice extends React.Component {
   state = {
@@ -31,60 +32,73 @@ export default class Choice extends React.Component {
   render() {
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
     return (
-      <div>
+      <Container> 
+        <div>
           <h2>array_of_places</h2>
-          <div>
+        </div>
           {this.state.array_of_places.map(place=>(
-
-           <div className="card" style={{width: '18rem'}}>
-            {/* <img className="card-img-top" src={`img/${this.props.restaurant.image}.jpg`} alt="Card image cap" /> */}
-            
-            <img className="card-img-top" src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
+      <Row-lg-12>
+      <Col-md-3>
+           <div className="card wholecard" style={{width: '18rem', height: '30rem'}}>
+            <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
             <div className="card-body">
               <h5 className="card-title">{place.name}</h5>
               <p className="card-text text-center">Rating: {place.rating}</p>
               <p className="card-text text-center">Price Level: {place.price_level}</p>
-              {/* <p className="card-text">Some quick exam  ple text to build on the card title and make up the bulk of the card's content.</p> */}
               <a href="should be a 1" className="btn btn-success">Yes</a>
               <a href="should be a 0" className="btn btn-danger">No</a>
-           {/* If can animate, put this on the back
-               <a href="topdoghotdogs.com" class="btn btn-primary">Website</a>
-          <a href="http://topdoghotdogs.com/themenu.html" class="btn btn-primary">Menu</a>
-          <a href="#" class="btn btn-primary">Directions</a>  */}
             </div>
           </div>
-        ))}
-          </div>
-        </div>
+        </Col-md-3>
+        </Row-lg-12>
+      ))}
+        </Container>
     );
   }
 };
-// class Choice extends React.Component {
-//       render() {
-//         return (
-//               // const {restaurant} = this.props
-    
-//           <div className="card" style={{width: '18rem'}}>
-//             {/* <img className="card-img-top" src={`img/${this.props.restaurant.image}.jpg`} alt="Card image cap" /> */}
-//             <img className="card-img-top" src='http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg' alt="Restaurant" />
-//             <div className="card-body">
-//               {/* <h5 className="card-title">{this.props.restaurant.name}Top Dog</h5> */}
-//               <h5 className="card-title">Top Dog</h5>
-//               {/* <p className="card-text">{this.props.genre.name}Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-//               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//               <a href="should be a 1" className="btn btn-success">Yes</a>
-//               <a href="should be a 0" className="btn btn-danger">No</a>
-//            {/* If can animate, put this on the back
-//                <a href="topdoghotdogs.com" class="btn btn-primary">Website</a>
-//           <a href="http://topdoghotdogs.com/themenu.html" class="btn btn-primary">Menu</a>
-//           <a href="#" class="btn btn-primary">Directions</a>  */}
-//             </div>
-//           </div>
-//         );
-//       }
-//     };  
 
+// //CARD
+// var CardContainer = React.createClass({
+// 	render: function(){
+// 		var cards = [];
+// 		for(var i = 1; i <= this.props.numCards; i += 1){
+// 			cards.push(<CardItem idNum={i}  />);
+// 		}
+// 		return (
+// 			<div className="card-flex">{cards}</div>
+// 		);
+// 	}
+// });
 
+// var CardItem = React.createClass({
+// 	render: function() {
+// 		return(
+// 			<div id={'card-' + this.props.idNum} className="card-flex-item"></div>
+// 		);
+// 	}
+// });
+
+// var CardContent = React.createClass({
+// 	render: function(){
+// 		return(
+// 			<div className="card-flex-wrapper">
+// 				<div className="card-flex-image">
+// 					<img src={this.props.imgSrc} alt="img placeholder" />
+// 				</div>
+// 				<div className="card-flex-content">
+// 					<h3>{this.props.headerText}</h3>
+// 					<p>{this.props.description}</p>
+// 					<a href={this.props.url} className="card-flex-button btn-block">Button</a>
+// 				</div>
+// 			</div>
+// 		);
+// 	}
+// });
+ /* If can animate, put this on the back
+               <a href="topdoghotdogs.com" class="btn btn-primary">Website</a>
+          <a href="http://topdoghotdogs.com/themenu.html" class="btn btn-primary">Menu</a>
+          <a href="#" class="btn btn-primary">Directions</a>
+                     {/* <img className="card-img-top" src={`img/${this.props.restaurant.image}.jpg`} alt="Card image cap" /> */
 
 
 
