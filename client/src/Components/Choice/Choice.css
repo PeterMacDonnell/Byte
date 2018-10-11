@@ -39,13 +39,14 @@
   .wholecard {
     float: left !important;
     overflow: hidden;
-    margin: 3px !important;
+    margin: 5px !important;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px !important;
     border-spacing: 10px;
     width: auto;
 		margin-left: 10px;
 		margin-bottom: 15px !important;
+		
     
   }
   .card-img-top {
