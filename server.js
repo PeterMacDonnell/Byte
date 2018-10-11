@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-var server = require('http').createServer(app)
-var io = require('socket.io')(server);
+// var server = require('http').createServer(app)
+// var io = require('socket.io')(server);
 var passport = require("passport");
 
 // Configure body parser for AJAX requests
@@ -33,9 +33,9 @@ mongoose.connect(
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 })
-io.on('connection', function(socket){
-  console.log('a user connected');
-});
+// io.on('connection', function(socket){
+//   console.log('a user connected');
+// });
 
 // Start the API server
 server.listen(PORT, function() {
