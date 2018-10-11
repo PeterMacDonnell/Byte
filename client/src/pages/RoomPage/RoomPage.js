@@ -5,7 +5,8 @@ import axios from 'axios';
 
 export default class roomPage extends React.Component {
   state = {
-    array_of_places: []
+    array_of_places: [],
+    place_id: []
   }
   api_call_function () {
     const food_input = "restaurants"
@@ -22,7 +23,10 @@ export default class roomPage extends React.Component {
   }
   api_places_details(res){
     const array_of_places = res.data.results;
+    const places_id = array_of_places.map(place =>{place.place_id});
     this.setState({array_of_places})
+    this.setState({places_id})
+    console.log (places_id)
     console.log(array_of_places)
 
   }
