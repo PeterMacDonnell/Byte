@@ -4,6 +4,7 @@ A web application that answers the question-what are we going to eat? Byte is �
 # Motivation:
 
 # Purpose:
+Byte is for people who want to go out to eat but have trouble making decisions. With a simple Yes/No for each person in the group, Byte will show the places people agree on (perfect match, tie, or by rank).
 
 # Technology:
 •    Passport via GoogleAuth
@@ -19,12 +20,13 @@ A web application that answers the question-what are we going to eat? Byte is �
 •    FontAwesome
 •    ESLint
 •    Photoshop
-•    Flat Icons
-
+•    SmashIcons
+•    FlatIcon
 
 # Tasks:
 Frontend: Grace, Crystal
 Backend: Alex, Peter, Brogan
 
 # Credits:
-Loading Icon from SmashIcons
+•    Loading symbol from SmashIcons
+
