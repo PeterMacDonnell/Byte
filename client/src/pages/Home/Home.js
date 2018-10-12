@@ -10,7 +10,7 @@ export default class All extends Component {
     return(
       <div>
   <Navbar />
-  <Modal />
+
   <Choice />
       </div>
 

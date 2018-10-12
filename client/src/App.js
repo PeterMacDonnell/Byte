@@ -26,8 +26,6 @@ const App = () => (
       </div>
     </Router>  
   </Grid>
-  <Modal />
-  
   </DocumentTitle>
 );
 
