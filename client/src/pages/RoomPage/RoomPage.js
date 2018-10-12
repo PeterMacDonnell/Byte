@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Choiceone from '../../Components/Choice/Choiceone';
 import Navbar from '../../Components/Navbar/Navbar';
+import  firebase  from "../../../../routes/firebase/index";
 
 export default class roomPage extends React.Component {
   state = {

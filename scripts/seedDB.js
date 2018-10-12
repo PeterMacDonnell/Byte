@@ -5,4 +5,4 @@ var User = require('../models/users')
 // Connect to the Mongo DB
 
 Choice.create({restName:"true",isChosen: true})
-User.create({uuserId:""})
+User.create({userId:"",roomRef:"",name:"",location:"",token:"",date:""})
