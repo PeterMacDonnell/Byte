@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
+// eslint-disable-next-line
 import{ firebase } from "../../firebase/index";
 import './Choice.css';
+// eslint-disable-next-line
 import {Col, Container, Row} from '../Grid/index';
 
 export default class Choice extends React.Component {
@@ -13,7 +15,7 @@ export default class Choice extends React.Component {
     const food_input = "restaurant"
     const location_input = "berkeley" 
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4"
-
+// eslint-disable-next-line
     axios.get("https://cors-anywhere.herokuapp.com/" + "https://maps.googleapis.com/maps/api/place/textsearch/json?query=+"+food_input+"+in+"+location_input+"&key="+api_key)
       .then(res => {
         console.log(res.data.results);
@@ -21,6 +23,7 @@ export default class Choice extends React.Component {
         this.setState({ array_of_places })
       })
   }
+  // eslint-disable-next-line
   getData(){
     const more = this.state.array_of_places;
     console.log(more)
@@ -49,51 +52,7 @@ export default class Choice extends React.Component {
         </Container>
     )
   }
-};
+}
 
-
-// //CARD
-// var CardContainer = React.createClass({
-// 	render: function(){
-// 		var cards = [];
-// 		for(var i = 1; i <= this.props.numCards; i += 1){
-// 			cards.push(<CardItem idNum={i}  />);
-// 		}
-// 		return (
-// 			<div className="card-flex">{cards}</div>
-// 		);
-// 	}
-// });
-
-// var CardItem = React.createClass({
-// 	render: function() {
-// 		return(
-// 			<div id={'card-' + this.props.idNum} className="card-flex-item"></div>
-// 		);
-// 	}
-// });
-
-// var CardContent = React.createClass({
-// 	render: function(){
-// 		return(
-// 			<div className="card-flex-wrapper">
-// 				<div className="card-flex-image">
-// 					<img src={this.props.imgSrc} alt="img placeholder" />
-// 				</div>
-// 				<div className="card-flex-content">
-// 					<h3>{this.props.headerText}</h3>
-// 					<p>{this.props.description}</p>
-// 					<a href={this.props.url} className="card-flex-button btn-block">Button</a>
-// 				</div>
-// 			</div>
-// 		);
-// 	}
-// });
- /* If can animate, put this on the back
-               <a href="topdoghotdogs.com" class="btn btn-primary">Website</a>
-          <a href="http://topdoghotdogs.com/themenu.html" class="btn btn-primary">Menu</a>
-          <a href="#" class="btn btn-primary">Directions</a>
-                     {/* <img className="card-img-top" src={`img/${this.props.restaurant.image}.jpg`} alt="Card image cap" /> */
-
-
+ 
 

@@ -12,7 +12,7 @@ export default class All extends Component {
       <div>
   <Navbar />
 <Choiceone />
-  <Choice />
+  {/* <Choice /> */}
       </div>
 
     )
