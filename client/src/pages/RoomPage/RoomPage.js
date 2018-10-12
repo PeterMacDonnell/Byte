@@ -49,7 +49,7 @@ export default class roomPage extends React.Component {
       <div>
           <h2>array_of_places</h2>
           <div>
-          {this.state.array_of_places.map(place=>(<li>{place.name}</li>))}
+          {/* {this.state.array_of_places.map(place=>(<li>{place.name}</li>))} */}
           </div>
         </div>
     );
