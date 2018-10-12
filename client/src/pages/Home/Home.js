@@ -17,6 +17,7 @@ class All extends Component {
 
   render(){
     return(
+      <div>
       <h1>Welcome to my App!</h1>
       //oauth stuff for button
       <a href="/auth/google" class="button">
@@ -51,6 +52,7 @@ class All extends Component {
      <span class="button-label">Sign in with Google</span>
    </div>
 </a>
+</div>
       
       
     )
