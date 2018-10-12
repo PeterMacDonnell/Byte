@@ -5,7 +5,7 @@ import{ firebase } from "../../firebase/index";
 import './Choice.css';
 // eslint-disable-next-line
 import {Col, Container, Row} from '../Grid/index';
-var keys = require("../../../../keys")
+var keys = require("./apiKeys")
 
 export default class Choice extends React.Component {
   state = {
