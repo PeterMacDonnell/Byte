@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 // import  * from '../../utils';
+import Choice from '../../Components/Choice/Choice';
+import Navbar from '../../Components/Navbar/Navbar';
+import Modal from '../../Components/Modal/Modal';
+import Choiceone from '../../Components/Choice/Choiceone';
 import queryString from "query-string";
 
 
@@ -12,13 +16,12 @@ class All extends Component {
    }
 }
 
-
-
-
   render(){
     return(
       <div>
       <h1>Welcome to my App!</h1>
+       <Navbar />
+        <Choiceone />
       //oauth stuff for button
       <a href="/auth/google" class="button">
           <div>
@@ -60,4 +63,4 @@ class All extends Component {
 }
 
 
-export default All;
+

@@ -9,6 +9,8 @@ import NavBar from "./Components/Navbar/Navbar";
 import Choice from "./Components/Choice/Choice";
 import Match from "./Components/Match/Match.js";
 import Login from "./Components/Login/Login.js";
+import Modal from "./Components/Modal/Modal.js";
+
 
 
 
@@ -19,19 +21,12 @@ const App = () => (
       <div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path = "/test" component={Room} />
+          <Route exact path = "/test" component={Room}/>
           <Route component={NoMatch}/>
         </Switch>
       </div>
-    </Router>
-    <NavBar />
-    <Choice />
-    <Login />
-    
-    {/* <Form /> */}
-    {/* <Match />  */}
+    </Router>  
   </Grid>
-  
   </DocumentTitle>
 );
 
