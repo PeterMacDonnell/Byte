@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Choiceone from '../../Components/Choice/Choiceone';
+import Navbar from '../../Components/Navbar/Navbar';
 
 export default class roomPage extends React.Component {
   state = {
@@ -44,13 +46,9 @@ export default class roomPage extends React.Component {
     this.api_call_function()
   }
   render() {
-    // const {places} = this.state;
     return (
       <div>
-          <h2>array_of_places</h2>
-          <div>
-          {/* {this.state.array_of_places.map(place=>(<li>{place.name}</li>))} */}
-          </div>
+        <Choiceone />   
         </div>
     );
   }
