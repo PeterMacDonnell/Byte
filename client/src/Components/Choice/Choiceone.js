@@ -1,13 +1,22 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
+import{ firebase } from "../../firebase/index";
+import './Choice.css';
+import {Col, Container, Row} from '../Grid/index';
 
-export default class roomPage extends React.Component {
-  state = {
-    array_of_places: [],
-    place_id: []
+
+
+export default class Choiceone extends React.Compoent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      array_of_places: [],
+      place_id: [],
+      detailed_array: [],
+      places_review: []
+    };
   }
   
-
   api_call_function () {
     const food_input = "restaurants"
     const location_input = "berkeley"
@@ -26,14 +35,18 @@ export default class roomPage extends React.Component {
     places_id.forEach(element => {
       axios.get("https://cors-anywhere.herokuapp.com/"+"https://maps.googleapis.com/maps/api/place/details/json?placeid="+element+"&fields=photos,name,rating,formatted_phone_number,review&key="+api_key)
       .then(res => {
+        const detailed_array = res.data.result;
+        this.setState({detailed_array:res.data.result});
         const text_review = res.data.result.reviews;
         text_review.forEach(element=>{
           const places_review = element.text;
-          // console.log(places_review)
+          this.setState({places_review:element.text});
+          // console.log(places_review);
+          console.log(detailed_array);
         })
 
         // console.log(res.data.result.reviews);
-        // put a loopydo in
+        // put a loopydo in`
   
       })
     });
@@ -47,11 +60,9 @@ export default class roomPage extends React.Component {
     // const {places} = this.state;
     return (
       <div>
-          <h2>array_of_places</h2>
-          <div>
-          {this.state.array_of_places.map(place=>(<li>{place.name}</li>))}
-          </div>
+      {this.state.data_array.map(data=>(<li>{data.name}</li>))}
         </div>
-    );
-  }
-};
+    )     
+    };
+}
+

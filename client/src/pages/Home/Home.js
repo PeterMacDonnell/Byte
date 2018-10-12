@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Choice from '../../Components/Choice/Choice';
 import Navbar from '../../Components/Navbar/Navbar';
 import Modal from '../../Components/Modal/Modal';
+import Choiceone from '../../Components/Choice/Choiceone';
 
 
 export default class All extends Component {
@@ -10,7 +11,7 @@ export default class All extends Component {
     return(
       <div>
   <Navbar />
-
+<Choiceone />
   <Choice />
       </div>
 
