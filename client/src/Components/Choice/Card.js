@@ -1,4 +1,4 @@
-// import{ firebase } from "../../firebase/index";
+// import{ firebase } from "../../../../routes/firebase/index";
 // import './Choice.css';
 // // eslint-disable-next-line
 // import {Col, Container, Row} from '../Grid/index';
