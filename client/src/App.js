@@ -5,8 +5,9 @@ import Room from "./pages/RoomPage";
 import NoMatch from "./pages/NoMatch";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
-import NavBar from "./Components/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Choice from "./Components/Choice/Choice";
+import Choiceone from "./Components/Choice/Choiceone";
 import Match from "./Components/Match/Match.js";
 import Login from "./Components/Login/Login.js";
 import Modal from "./Components/Modal/Modal.js";
@@ -26,7 +27,7 @@ const App = () => (
         </Switch>
       </div>
     </Router>  
-  </Grid>
+    </Grid>
   </DocumentTitle>
 );
 

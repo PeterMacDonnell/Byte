@@ -19,9 +19,9 @@ class Home extends Component {
   render(){
     return(
       <div>
+     
       <h1>Welcome to my App!</h1>
-       <Navbar />
-        <Choiceone />
+       
       //oauth stuff for button
       <a href="/auth/google" class="button">
           <div>
