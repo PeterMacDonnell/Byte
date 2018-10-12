@@ -1,6 +1,5 @@
 module.exports = {
-  // Item: require("./Item"),
-  User: require("./users"),
+  // User: require("./users"),
   Choice: require("./choices"),
   Group: require("./groups")
 };

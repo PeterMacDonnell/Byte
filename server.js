@@ -16,28 +16,36 @@ app.use(express.static("client/build"));
 // Add routes, both API and view
 app.use(routes);
 
+// Set up promises with mongoose
+// mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/byte",
+);
+
 
 app.use(passport.initialize()); // after line no.20 (express.static)
 
-require("./src/utils/passport");
+require("./client/src/utils/passport");
 
-// Set up promises with mongoose
-mongoose.Promise = global.Promise;
-// Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/byteappDB",
-  {
-    useMongoClient: true
-  }
-);
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-})
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
+
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
+
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/index.html');
+// })
 // io.on('connection', function(socket){
 //   console.log('a user connected');
 // });
 
 // Start the API server
-server.listen(PORT, function() {
+app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
