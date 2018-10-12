@@ -33,7 +33,7 @@ export default class Choiceone extends React.Compoent {
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
     // console.log(places_id);
     places_id.forEach(element => {
-      axios.get("https://cors-anywhere.herokuapp.com/"+"https://maps.googleapis.com/maps/api/place/details/json?placeid="+element+"&fields=photos,name,rating,formatted_phone_number,review&key="+api_key)
+      axios.get("https://cors-anywhere.herokuapp.com/"+"https://maps.googleapis.com/maps/api/place/details/json?placeid="+element+"&fields=photo,name,rating,price_level,formatted_address,id,formatted_phone_number,scope,type,opening_hours,website,review&key="+api_key)
       .then(res => {
         const detailed_array = res.data.result;
         this.setState({detailed_array:res.data.result});
@@ -56,6 +56,7 @@ export default class Choiceone extends React.Compoent {
   componentDidMount() {
     this.api_call_function()
   }
+  
   render() {
     // const {places} = this.state;
     return (
