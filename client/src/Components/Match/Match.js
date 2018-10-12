@@ -1,8 +1,8 @@
 import React from 'react';
-import './match.css';
+import './Match';
 
 
-class Match extends React.Component {
+export default class Match extends React.Component {
   render () {
     // const {restaurant} = this.props.whatever;
     return  (
@@ -10,7 +10,7 @@ class Match extends React.Component {
     <div className="col-md-6 col-lg-3">
       <div className="card mb-3">
         {/* <img className="card-img-top" src={`img/${props.restaurant.image}.jpg`} alt="Card image cap"/> */}
-        <img className="card-img-top" src={`http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg`} alt="Card image cap"/>
+        <img className="card-img-top" src={`http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg`} alt="Restaurant"/>
         <div className="card-body">
           <h5 className="card-title text-center">Whoa. You got a byte!</h5>
           {/* <h4 className="card-title text-center">{props.restaurant.name}</h4> */}
@@ -31,4 +31,3 @@ class Match extends React.Component {
 }
 
 
-    export default Match;

@@ -1,24 +1,68 @@
+// import GoogleStrategy from "passport-google-oauth";
+
+
+
+
 var passport = require('passport');
-// var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+  
+passport.serializeUser(function(user, done) {
+  done(null, user);
+ });
+ passport.deserializeUser(function(user, done) {
+  done(null, user);
+ });
 
-//Requiring the yarn google oauth package
-import GoogleStrategy from "passport-google-oauth";
-
-
-// Use the GoogleStrategy within Passport.
-//   Strategies in Passport require a `verify` function, which accept
-//   credentials (in this case, an accessToken, refreshToken, and Google
-//   profile), and invoke a callback with a user object.
-passport.use(new GoogleStrategy({
-    //Peter Says: We have to get a specific token from a google APIs project?
+ passport.use(
+  new GoogleStrategy(
+   {
     clientID: "http://1090937809988-h56ijsfn9dt8qfdebdr2ioc1mj3fg8g2.apps.googleusercontent.com/",
-    clientSecret: "ZEbNC8hK0Uq9w5_5RLQumVUB"
-    // callbackURL: "http://www.example.com/auth/google/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-       User.findOrCreate({ googleId: profile.id }, function (err, user) {
-         return done(err, user);
-       });
-  }
-));
+    clientSecret: "ZEbNC8hK0Uq9w5_5RLQumVUB",
+    callbackURL: "localhost:3000/home"
+    //http://localhost:4500/auth/google/callback hackernoon gives this format. Not sure about the last three paths
+   },
+   function(accessToken, refreshToken, profile, done) {
+    var userData = {
+     email: profile.emails[0].value,
+     name: profile.displayName,
+     token: accessToken
+    };
+    done(null, userData);
+   }
+  )
+ );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // passport.use(new GoogleStrategy({
+     
+  //     clientID: "http://1090937809988-h56ijsfn9dt8qfdebdr2ioc1mj3fg8g2.apps.googleusercontent.com/",
+  //     clientSecret: "ZEbNC8hK0Uq9w5_5RLQumVUB",
+  //     callbackURL: "localhost:3000/home"
+  //   },
+  //   function(accessToken, refreshToken, profile, done) {
+  //        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+  //          return done(err, user);
+  //        });
+  //   }
+  // ));
+  
+
+
+
 
