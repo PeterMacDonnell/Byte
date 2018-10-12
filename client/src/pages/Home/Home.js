@@ -7,7 +7,7 @@ import Choiceone from '../../Components/Choice/Choiceone';
 import queryString from "query-string";
 
 
-class All extends Component {
+class Home extends Component {
   componentWillMount() {
     var query = queryString.parse(this.props.location.search);
     if (query.token) {
@@ -62,5 +62,5 @@ class All extends Component {
   }
 }
 
-
+export default Home;
 

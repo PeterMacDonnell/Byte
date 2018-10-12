@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const firstController = require("../../controllers/ChoiceController")
+const ChoiceController = require("../../controllers/ChoiceController")
 // Matches with "/api/items"
 router.route("/home")
   .get(ChoiceController.findById)
