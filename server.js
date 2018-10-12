@@ -5,7 +5,7 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 // var server = require('http').createServer(app)
-// var io = require('socket.io')(server);
+
 var passport = require("passport");
 
 // Configure body parser for AJAX requests
@@ -24,7 +24,7 @@ mongoose.connect(
 );
 
 
-app.use(passport.initialize()); // after line no.20 (express.static)
+app.use(passport.initialize()); 
 
 require("./client/src/utils/passport");
 
@@ -38,12 +38,7 @@ app.get('/auth/google/callback',
     res.redirect('/');
   });
 
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/index.html');
-// })
-// io.on('connection', function(socket){
-//   console.log('a user connected');
-// });
+
 
 // Start the API server
 app.listen(PORT, function() {
