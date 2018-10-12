@@ -22,13 +22,7 @@ class Modal extends React.Component {
     }
   
     render() {
-      const popover = (
-        <Popover id="modal-popover" title="popover">
-          very popoverish. such engagement. 
-        </Popover>
-      );
-      const tooltip = <Tooltip id="modal-tooltip">wow. this is called a tooltip</Tooltip>;
-  
+      
       return (
         <div>
           <p>Click to get the full modal experience</p>
@@ -39,61 +33,74 @@ class Modal extends React.Component {
   
           <Modal show={this.state.show} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>The restaurant you've been assigned</Modal.Title>
+              <Modal.Title>Give me your details</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <h4>Name goes here. Pass props into me to generate</h4>
-              <p>
-                Other stuff can go here. pass more props
-              </p>
-  
-              <h4>Popover in a modal. pass props</h4>
-              <p>
-                there is a{' '}
-                <OverlayTrigger overlay={popover}>
-                  <a href="#popover">popover</a>
-                </OverlayTrigger>{' '}
-                here
-              </p>
-  
-              <h4>This is called a tooltip. </h4>
-              <p>
-                there is a{' '}
-                <OverlayTrigger overlay={tooltip}>
-                  <a href="#tooltip">tooltip</a>
-                </OverlayTrigger>{' '}
-                here
-              </p>
-  
-              <hr />
-  
-              <h4>Overflowing text to show scroll behavior if needed</h4>
-              <p>
-                Do we want these to be reviews? Depending on how deep we go...
-              </p>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur
-                et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                auctor.
-              </p>
-              <p>
-                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-                cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-                dui. Donec ullamcorper nulla non metus auctor fringilla.
-              </p>
-              <p>
-                Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-                ac consectetur ac, vestibulum at eros.
-              </p>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur
-                et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                auctor.
-              </p>
-         
             
-            
+            {/* Modal */}
+<div className="modal fade" id="reservationModal" tabIndex={-1} role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div className="modal-dialog modal-lg" role="document">
+    <div className="modal-content">
+      <div className="modal-body">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="bg-image" style={{backgroundImage: 'url(images/reservation_1.jpg)'}} />
+          </div>
+          <div className="col-lg-12 p-5">
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+              <small>CLOSE </small><span aria-hidden="true">×</span>
+            </button>
+            <h1 className="mb-4">Send a Byte Survey</h1>  
+            <form action="#" method="post">
+              <div className="row">
+                <div className="col-md-12 form-group">
+                  <label htmlFor="m_people">How Many People</label>
+                  <select name id="m_people" className="form-control">
+                    <option value={1}>2 People</option>
+                    <option value={2}>3 People</option>
+                    <option value={3}>4 People</option>
+                    <option value={4}>>5+ People</option>
+                  </select>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 form-group">
+                    <label htmlFor="m_date">Date</label>
+                    <input type="text" className="form-control" id="m_date" />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 form-group">
+                    <label htmlFor="m_time">Time</label>
+                    <input type="text" className="form-control" id="m_time" />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 form-group">
+                    <label htmlFor="food_input">Type of Eating</label>
+                    <select name id="m_people" className="form-control">
+                      <option value="breakfast">Breakfast</option>
+                      <option value="brunch">Brunch</option>
+                      <option value="lunch">Lunch</option>
+                      <option value="dinner">Dinner</option>
+                      <option value="drinks">Drinks</option>
+                      <option value="drinks">Dessert</option>
+                    </select>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 form-group">
+                      <input type="submit" className="btn btn-primary btn-lg btn-block" defaultValue="Get Some Bytes" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div></div>
+              
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={this.handleClose}>Close</Button>
