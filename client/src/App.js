@@ -13,6 +13,7 @@ import Modal from "./Components/Modal/Modal.js";
 
 
 
+
 const App = () => (
   <DocumentTitle title="Byte App">
   <Grid>
@@ -28,5 +29,7 @@ const App = () => (
   </Grid>
   </DocumentTitle>
 );
+
+
 
 export default App;
