@@ -5,7 +5,7 @@
 
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-var keys = require("../../../keys")
+var keys = require("./passportKeys")
   
 passport.serializeUser(function(user, done) {
   done(null, user);
