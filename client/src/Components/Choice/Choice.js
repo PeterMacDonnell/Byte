@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
 // eslint-disable-next-line
-import{ firebase } from "../../firebase/index";
+import{ firebase } from "../../../../routes/firebase/index";
 import './Choice.css';
 // eslint-disable-next-line
 import {Col, Container, Row} from '../Grid/index';
+var keys = require("./apiKeys")
 
 export default class Choice extends React.Component {
   state = {
@@ -14,7 +15,8 @@ export default class Choice extends React.Component {
   componentDidMount() {
     const food_input = "restaurant"
     const location_input = "berkeley" 
-    const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4"
+    //Peter tried hiding this key
+    const api_key = keys.api_key.key
 // eslint-disable-next-line
     axios.get("https://cors-anywhere.herokuapp.com/" + "https://maps.googleapis.com/maps/api/place/textsearch/json?query=+"+food_input+"+in+"+location_input+"&key="+api_key)
       .then(res => {

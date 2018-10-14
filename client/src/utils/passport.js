@@ -5,6 +5,7 @@
 
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var keys = require("./passportKeys")
   
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -16,8 +17,8 @@ passport.serializeUser(function(user, done) {
  passport.use(
   new GoogleStrategy(
    {
-    clientID: "http://1090937809988-h56ijsfn9dt8qfdebdr2ioc1mj3fg8g2.apps.googleusercontent.com/",
-    clientSecret: "ZEbNC8hK0Uq9w5_5RLQumVUB",
+    clientID: keys.authentication.clientID,
+    clientSecret: keys.authentication.clientSecret,
     callbackURL: "localhost:3000/home"
     //http://localhost:4500/auth/google/callback hackernoon gives this format. Not sure about the last three paths
    },
