@@ -25,8 +25,28 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <title>Byte App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <noscript>
@@ -35,132 +55,35 @@
     <div id="root"></div>
 
   
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light my-nav">
-      
-      <a class="navbar-brand" href="#">Byte</a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse my-nav-font" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link active my-nav-font" href="#">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link my-nav-font" href="#">About</a>
-              <a class="nav-item nav-link my-nav-font" href="#">Meet the Team</a>
-              
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-          </div>
-      </div>
-    </div>
-  </nav> -->
-
-  <!-- <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Top Dog</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-success my-btn-yes">Yes</a>
-      <a href="#" class="btn btn-danger my-btn-no">No</a> -->
-
-      <!--If can animate, put this on the back-->
-      <!-- <a href="topdoghotdogs.com" class="btn btn-primary">Website</a>
-      <a href="http://topdoghotdogs.com/themenu.html" class="btn btn-primary">Menu</a>
-      <a href="#" class="btn btn-primary">Directions</a> -->
-
-    <!-- </div>
-  </div> -->
-
-  <!--LogIn Card-->
-
-  <!-- <div class="card" style="width: 30rem;">
-    <div class="card-body">
-      <h5 class="card-title">Log In</h5>
-      <p class="card-text">
-
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <button type="login" class="btn btn-success">Log In</button>
-          <button type="signup" class="btn btn-warning">Sign Up</button>
-        </form>
-      </p>
-
-      <p>OR</p>
-      <form>
-        <div class="form-group">
-          <label for="groupNumber">Group Number</label>
-          <input type="number" class="form-control" id="groupNumber" placeholder="12345">
-        </div>
-        
-        <button type="login" class="btn btn-success">Join Group</button>
-      </form>
-      </div>
-  </div> -->
-
-<!--Match Card-->
-
-<!-- <div class="card" style="width: 30rem;">
-  <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Whoa! You got a Byte!</h5>
-    <p class="card-text">
-      <div class="card">
-        <div class="card-body">
-          <div class="resultImage">
-            <img src="http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg" alt="" width=100%>
-          </div>
-          <p class= "matchTitle">&ltTitle&gt</p>
-          <p class= "matchGenre">&ltGenre&gt </p>
-          <p class= "matchPrice">&ltPrice Range&gt </p>
-          <p class= "matchDistance">&ltDistance&gt </p>
-
-          <button type="button" class="btn btn-info">More Info</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-            <div class="resultImage">
-                <img src="http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg" alt="" width=100%>
-              </div>
-          <p class= "matchTitle">&ltTitle&gt</p>
-          <p class= "matchGenre">&ltGenre&gt </p>
-          <p class= "matchPrice">&ltPrice Range&gt </p>
-          <p class= "matchDistance">&ltDistance&gt </p>
-          <button type="button" class="btn btn-info">More Info</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-            <div class="resultImage">
-                <img src="http://sffood.net/wp-content/uploads/top-dog-hot-dogs-27-700x452.jpg" alt="" width=100%>
-              </div>
-          <p class= "matchTitle">&ltTitle&gt</p>
-          <p class= "matchGenre">&ltGenre&gt </p>
-          <p class= "matchPrice">&ltPrice Range&gt </p>
-          <p class= "matchDistance">&ltDistance&gt </p>
-          <button type="button" class="btn btn-info">More Info</button>
-        </div>
-      </div>
-      
-    </p>
-
-    </div>
+    
     </div> -->
       
-</body>
+
 <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
 <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+<div id="site-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    
+    <script src="js/jquery.animateNumber.min.js"></script>
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+
+    <script src="js/main.js"></script>
+
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+</body>
 </html>

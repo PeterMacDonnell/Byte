@@ -16,9 +16,10 @@ class Home extends Component {
       <div>
      
       <h1>Welcome to my App!</h1>
+      
        
       
-   </div>
+      </div>
 
       
       
