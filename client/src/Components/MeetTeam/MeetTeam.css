@@ -1,4 +1,6 @@
-
+.container {
+	align-content: center;
+}
 .bg-light {
     background-color: #D0DE4B;
     color: #000000;
@@ -8,7 +10,8 @@ body {
 }
 
 .row {
-    margin-top: 30px;
+	margin-top: 30px;
+	float: justify;
 }
 
 .card {
@@ -16,7 +19,8 @@ body {
     border: solid 5px #FD9B6E;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     margin: auto;
-    float: none;
+	float: none;
+	text-align: center;
 }
 
 h5.card-title {
