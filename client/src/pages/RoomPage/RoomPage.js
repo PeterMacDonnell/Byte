@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 // eslint-disable-next-line
 import{ firebase } from "../../firebase/index";
-import './Choice.css';
-import {Col, Container, Row} from '../Grid/index';
+import '../../Components/Choice/Choice';
+import {Col, Container, Row} from '../../Components/Grid/index';
 // import {Card} from '../Choice/Card';
 class RoomPage extends React.Component {
 
@@ -69,14 +69,12 @@ class RoomPage extends React.Component {
             <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
             <div className="card-body">
               <h5 className="card-title">{place.name}</h5>
-              <p className="card-text text-center">Rating: {place.rating}</p>
-              <p className="card-text text-center">Price: {place.price_level}</p>
-              <p className="card-text text-center">Address: {place.formatted_address}</p>
+              <p className="card-text text-center">Rating: {place.rating}/5</p>
+              <p className="card-text text-center">Price: {place.price_level}/4</p>
               <p className="card-text text-center">Phone: {place.formatted_phone_number}</p>
-              <p className="card-text text-center">Reviews: {place.reviews[0].text}</p>
-              <p className="card-text text-center">Price Level: {place.price_level}</p>
-              <form action="" className="btn btn-success" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
-              <form action="" className="btn btn-success" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form>
+              <p className="card-text text-center">Address: {place.formatted_address}</p>
+              <form action="" className="btn btn-default yes" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
+              <form action="" className="btn btn-default no" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form>
   
             </div>
           </div>
@@ -99,7 +97,7 @@ class RoomPage extends React.Component {
     };
 }
 
-export default Roompage;
+export default RoomPage;
 
 // import React from 'react';
 // import axios from 'axios';
