@@ -156,12 +156,9 @@ body > .container {
 }
 
 .btn {
-	display: inline-block;
+	display: inline;
 }
 
-.no {
-	float: right;
-}
 /* Custom page CSS - iPad/Desktop  */
 
 @media (min-width: 768px) {

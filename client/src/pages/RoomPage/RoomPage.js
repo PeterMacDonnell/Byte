@@ -57,7 +57,7 @@ class RoomPage extends React.Component {
 
     return (
       <div>
-      <h1> Hello People Of The Internet!</h1>
+      <h1> Welcome to The Byte App!</h1>
       {this.state.detailedArray.length ? (
             <div>
                 {this.state.detailedArray.map(chicken => (
