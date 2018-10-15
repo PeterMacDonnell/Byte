@@ -14,13 +14,9 @@ class Home extends Component {
   render(){
     return(
       <div>
-<<<<<<< HEAD
-   <h1 Byte </h1>  
-      </div>
-    )   
-=======
      
       <h1>Welcome to my App!</h1>
+      
        
       
    </div>
@@ -29,7 +25,6 @@ class Home extends Component {
       
     )
   }
->>>>>>> 98f159c625a6d2f1dd8fc5cc994321e1e829713a
 }
 
 export default Home;
