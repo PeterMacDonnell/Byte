@@ -47,6 +47,7 @@ export default class roomPage extends React.Component {
     this.api_call_function()
   }
   render() {
+    console.log('in RoomPage, props:', this.props);
     return (
       <div>
         <Choiceone />   

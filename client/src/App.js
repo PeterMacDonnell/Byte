@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import Room from "./pages/RoomPage";
+import RoomPage from "./pages/RoomPage";
 import NoMatch from "./pages/NoMatch";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
@@ -20,8 +20,8 @@ const App = () => (
     <Router>
       <div>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path = "/test" component={Room}/>
+          <Route exact path="/" component={RoomPage} />
+          <Route exact path = "/test" component={RoomPage}/>
           <Route component={NoMatch}/>
         </Switch>
       </div>
