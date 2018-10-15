@@ -9,20 +9,27 @@ import * as firebaseui from 'firebaseui'
 
 
 class Home extends Component {
-  componentWillMount() {
-    var query = queryString.parse(this.props.location.search);
-    if (query.token) {
-      window.localStorage.setItem("jwt", query.token);
-      this.props.history.push("/");
-   }
-}
+  
 
   render(){
     return(
       <div>
+<<<<<<< HEAD
    <h1 Byte </h1>  
       </div>
     )   
+=======
+     
+      <h1>Welcome to my App!</h1>
+       
+      
+   </div>
+
+      
+      
+    )
+  }
+>>>>>>> 98f159c625a6d2f1dd8fc5cc994321e1e829713a
 }
 
 export default Home;
