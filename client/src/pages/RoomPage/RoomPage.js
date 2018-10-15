@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 // eslint-disable-next-line
 import{ firebase } from "../../firebase/index";
-import './Choice.css';
-import {Col, Container, Row} from '../Grid/index';
+// import './Choice.css';
+import {Col, Container, Row} from '../../Components/Grid/index';
 // import {Card} from '../Choice/Card';
 class RoomPage extends React.Component {
 
@@ -95,7 +95,7 @@ class RoomPage extends React.Component {
     };
 }
 
-export default Roompage;
+export default RoomPage;
 
 // import React from 'react';
 // import axios from 'axios';
