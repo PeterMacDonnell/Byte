@@ -79,11 +79,7 @@ class Choiceone extends React.Component {
         </Col>
       ))}
        </Row>
-        </Container>
-                    
-                    
-                    
-                  
+        </Container> 
                 ))}
             </div>
               
