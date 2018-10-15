@@ -12,7 +12,7 @@ const SignUpPage = () =>
 class SignUpForm extends Component {
   constructor(props) {
     super(props);
-  }
+  };     
 
   onSubmit = (event) => {
 
