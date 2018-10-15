@@ -12,7 +12,7 @@ const SignUpPage = () =>
 class SignUpForm extends Component {
   constructor(props) {
     super(props);
-  }
+  };     
 
   onSubmit = (event) => {
 
@@ -40,3 +40,10 @@ export {
   SignUpForm,
   SignUpLink,
 };
+const INITIAL_STATE = {
+    username: '',
+    email: '',
+    passwordOne: '',
+    passwordTwo: '',
+    error: null,
+  };
