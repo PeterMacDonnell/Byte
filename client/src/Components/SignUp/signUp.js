@@ -40,3 +40,10 @@ export {
   SignUpForm,
   SignUpLink,
 };
+const INITIAL_STATE = {
+    username: '',
+    email: '',
+    passwordOne: '',
+    passwordTwo: '',
+    error: null,
+  };
