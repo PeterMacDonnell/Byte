@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import Room from "./pages/RoomPage";
+import RoomPage from "./pages/RoomPage";
 import NoMatch from "./pages/NoMatch";
+import Matchpage from "./pages/MatchPage";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
 import Navbar from "./Components/Navbar/Navbar";
@@ -21,7 +22,8 @@ const App = () => (
       <div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path = "/test" component={Room}/>
+          <Route exact path = "/room" component={RoomPage}/>
+          <Route exact path = "/match" component = {Matchpage} />
           <Route component={NoMatch}/>
         </Switch>
       </div>
