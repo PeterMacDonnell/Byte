@@ -50,7 +50,11 @@ class RoomPage extends React.Component {
   }
 
   render() {
+
+    console.log('in RoomPage, props:', this.props);
+
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
+
     return (
       <div>
       <h1> Hello People Of The Internet!</h1>
