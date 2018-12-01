@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 // import  * from '../../utils';
 import Choice from '../../Components/Choice/Choice';
 import Navbar from '../../Components/Navbar/Navbar';
