@@ -7,7 +7,7 @@ import Choiceone from '../../Components/Choice/Choiceone';
 import queryString from "query-string";
 import * as firebaseui from 'firebaseui';
 
-class Home extends Component {
+export default class Home extends React.Component {
   render() {
     return (
       <div>
