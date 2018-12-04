@@ -74,14 +74,14 @@ class RoomPage extends React.Component {
       <Col size="3">
            <div className="card wholecard" style={{position: 'relative', width: '18rem', height: '30rem'}}>
             <img className="card-img-top" style={{position: 'relative', width: '18rem', height: '10rem', borderRadius: 5}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
-            <div className="card-body">
+            <div className="card-body" style={{lineHeight: '1'}}>
               <h5 className="card-title">{place.name}</h5>
               <p className="card-text text-center">Rating: {place.rating}/5</p>
               <p className="card-text text-center">Price: {place.price_level}/4</p>
               <p className="card-text text-center">Phone: {place.formatted_phone_number}</p>
               <p className="card-text text-center">Address: {place.formatted_address}</p>
-              <form action="" className="btn btn-default yes" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
-              <form action="" className="btn btn-default no" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form>
+              <form action="" className="btn btn-default yes" method="post"> <button name="Yes" id={place.place_id} value="1" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b'}} >Yes</button></form>
+              <form action="" className="btn btn-default no" method="post"> <button name="No" id={place.place_id}  value="0" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#F6422B'}} >No</button></form>
             </div>
           </div>
         </Col>
