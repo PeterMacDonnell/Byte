@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+     import React, { Component } from "react";
 import {Col, Container, Row} from '../../Components/Grid/index';
 
 export default class roomPage extends React.Component{
@@ -18,7 +18,6 @@ export default class roomPage extends React.Component{
                     <p className="card-text text-center">Reviews: {"Very cool venue for music. Great lighting & acoustics. Perfect size allowing for great interaction between artist and audience. Will definitely be going to more shows here 💯😎"}</p>
                     {/* <form action="" className="btn btn-success" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
                     <form action="" className="btn btn-success" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form> */}
-
                     </div>
                 </div>
             </Col>

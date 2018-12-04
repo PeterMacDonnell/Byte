@@ -11,7 +11,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <title>Colorlib Template - EatWell</title>
+        <title>Byte</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet" />
@@ -49,7 +49,7 @@ export default class Home extends React.Component {
           <div className="container">
             <div className="row align-items-center justify-content-center text-center site-vh-100">
               <div className="col-md-12">
-                <h1 className="site-heading site-animate mb-3">Welcome To EatWell</h1>
+                <h1 className="site-heading site-animate mb-3">Welcome To Byte</h1>
                 <h2 className="h5 site-subheading mb-5 site-animate">Come and eat well with our delicious &amp; healthy foods.</h2>    
                 <p><a href="https://colorlib.com/" target="_blank" className="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Reservation</a></p>
               </div>
@@ -94,7 +94,7 @@ export default class Home extends React.Component {
                       <img src="images/offer_1.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
                       <div className="media-body p-md-5 p-4">
                         <h5 className="text-primary">$19.50</h5>
-                        <h5 className="mt-0 h4">Beef with Sausage</h5>
+                        <h5 className="mt-0 h4">Squash the Beef with Sausage</h5>
                         <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                         <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
                       </div>
@@ -106,83 +106,6 @@ export default class Home extends React.Component {
                       <div className="media-body p-md-5 p-4">
                         <h5 className="text-primary">$29.50</h5>
                         <h5 className="mt-0 h4">Egg with Garlic </h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_3.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$11.50</h5>
-                        <h5 className="mt-0 h4">Beef Ribs</h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_1.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$33.50</h5>
-                        <h5 className="mt-0 h4">Beef with Sauce</h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_2.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$12.50</h5>
-                        <h5 className="mt-0 h4">Fresh Salmon Fish</h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_3.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$53.50</h5>
-                        <h5 className="mt-0 h4">Beef Ribs</h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_1.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$22.50</h5>
-                        <h5 className="mt-0 h4">Beef with Sauce</h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_2.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$39.50</h5>
-                        <h5 className="mt-0 h4">Fresh Salmon Fish</h5>
-                        <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="media d-block mb-4 text-center site-media site-animate border-0">
-                      <img src="images/offer_3.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                      <div className="media-body p-md-5 p-4">
-                        <h5 className="text-primary">$39.50</h5>
-                        <h5 className="mt-0 h4">Beef Ribs</h5>
                         <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                         <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Order Now!</a></p>
                       </div>
@@ -229,166 +152,12 @@ export default class Home extends React.Component {
                             <h6 className="text-primary menu-price">$35.50</h6>
                           </div>
                         </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_2.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Italian Sauce Mushroom</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$24.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_3.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Fried Potato w/ Garlic</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$14.50</h6>
-                          </div>
-                        </div>
                       </div>
-                      <div className="col-md-6 site-animate">
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_2.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Italian Sauce Mushroom</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$35.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_1.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Salted Fried Chicken</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$12.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_3.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Fried Potato w/ Garlic</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$18.50</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                    <div className="row">
-                      <div className="col-md-6 site-animate">
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_3.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Fried Potato w/ Garlic</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$14.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_1.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Salted Fried Chicken</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$35.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_2.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Italian Sauce Mushroom</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$24.50</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 site-animate">
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_3.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Fried Potato w/ Garlic</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$18.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_2.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Italian Sauce Mushroom</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$35.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_1.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Salted Fried Chicken</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$12.50</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
-                    <div className="row">
-                      <div className="col-md-6 site-animate">
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_2.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Italian Sauce Mushroom</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$24.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_1.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Salted Fried Chicken</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$35.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_3.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Fried Potato w/ Garlic</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$14.50</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 site-animate">
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_3.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Fried Potato w/ Garlic</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$18.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_2.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Italian Sauce Mushroom</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$35.50</h6>
-                          </div>
-                        </div>
-                        <div className="media menu-item">
-                          <img className="mr-3" src="images/menu_1.jpg" alt="Free Template by colorlib.com" />
-                          <div className="media-body">
-                            <h5 className="mt-0">Salted Fried Chicken</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <h6 className="text-primary menu-price">$12.50</h6>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </section>
         {/* END section */}
@@ -408,26 +177,6 @@ export default class Home extends React.Component {
                   <img src="images/offer_1.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
                   <div className="media-body p-md-5 p-4">
                     <h5 className="mt-0 h4">We Have Dilecious Food</h5>
-                    <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6">
-                <div className="media d-block mb-4 text-center site-media site-animate">
-                  <img src="images/offer_2.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                  <div className="media-body p-md-5 p-4">
-                    <h5 className="mt-0 h4">Chef Special Menu</h5>
-                    <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6">
-                <div className="media d-block mb-4 text-center site-media site-animate">
-                  <img src="images/offer_3.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                  <div className="media-body p-md-5 p-4">
-                    <h5 className="mt-0 h4">Merriage Celebrations</h5>
                     <p className="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                     <p className="mb-0"><a href="/" className="btn btn-primary btn-sm">Read More</a></p>
                   </div>
@@ -461,21 +210,6 @@ export default class Home extends React.Component {
               <div className="col-md-4 site-animate">
                 <a href="images/menu_3.jpg" className="site-thumbnail image-popup">
                   <img src="images/menu_3.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                </a>
-              </div>
-              <div className="col-md-4 site-animate">
-                <a href="images/menu_2.jpg" className="site-thumbnail image-popup">
-                  <img src="images/menu_2.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                </a>
-              </div>
-              <div className="col-md-4 site-animate">
-                <a href="images/menu_3.jpg" className="site-thumbnail image-popup">
-                  <img src="images/menu_3.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
-                </a>
-              </div>
-              <div className="col-md-4 site-animate">
-                <a href="images/menu_1.jpg" className="site-thumbnail image-popup">
-                  <img src="images/menu_1.jpg" alt="Free Template by colorlib.com" className="img-fluid" />
                 </a>
               </div>
             </div>
@@ -592,81 +326,6 @@ export default class Home extends React.Component {
             </div>
           </div>
         </footer>
-        {/* Modal */}
-        <div className="modal fade" id="reservationModal" tabIndex={-1} role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
-          <div className="modal-dialog modal-lg" role="document">
-            <div className="modal-content">
-              <div className="modal-body">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="bg-image" style={{backgroundImage: 'url(images/reservation_1.jpg)'}} />
-                  </div>
-                  <div className="col-lg-12 p-5">
-                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                      <small>CLOSE </small><span aria-hidden="true">×</span>
-                    </button>
-                    <h1 className="mb-4">Reserve A Table</h1>  
-                    <form action="/" method="post">
-                      <div className="row">
-                        <div className="col-md-6 form-group">
-                          <label htmlFor="m_fname">First Name</label>
-                          <input type="text" className="form-control" id="m_fname" />
-                        </div>
-                        <div className="col-md-6 form-group">
-                          <label htmlFor="m_lname">Last Name</label>
-                          <input type="text" className="form-control" id="m_lname" />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-12 form-group">
-                          <label htmlFor="m_email">Email</label>
-                          <input type="email" className="form-control" id="m_email" />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-6 form-group">
-                          <label htmlFor="m_people">How Many People</label>
-                          <select name id="m_people" className="form-control">
-                            <option value={1}>1 People</option>
-                            <option value={2}>2 People</option>
-                            <option value={3}>3 People</option>
-                            <option value="4+">4+ People</option>
-                          </select>
-                        </div>
-                        <div className="col-md-6 form-group">
-                          <label htmlFor="m_phone">Phone</label>
-                          <input type="text" className="form-control" id="m_phone" />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-6 form-group">
-                          <label htmlFor="m_date">Date</label>
-                          <input type="text" className="form-control" id="m_date" />
-                        </div>
-                        <div className="col-md-6 form-group">
-                          <label htmlFor="m_time">Time</label>
-                          <input type="text" className="form-control" id="m_time" />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-12 form-group">
-                          <label htmlFor="m_message">Message</label>
-                          <textarea className="form-control" id="m_message" cols={30} rows={7} defaultValue={""} />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-12 form-group">
-                          <input type="submit" className="btn btn-primary btn-lg btn-block" defaultValue="Reserve Now" />
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* END Modal */}
         {/* loader */}
         <div id="site-loader" className="show fullscreen"><svg className="circular" width="48px" height="48px"><circle className="path-bg" cx={24} cy={24} r={22} fill="none" strokeWidth={4} stroke="#eeeeee" /><circle className="path" cx={24} cy={24} r={22} fill="none" strokeWidth={4} strokeMiterlimit={10} stroke="#F96D00" /></svg></div>
       </div>

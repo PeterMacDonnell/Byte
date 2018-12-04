@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 // eslint-disable-next-line
 import{ firebase } from "../../firebase/index";
-import '../../Components/Choice/Choice';
+// import '../../Components/Choice/Choice';
 import {Col, Container, Row} from '../../Components/Grid/index';
 // import {Card} from '../Choice/Card';
 class RoomPage extends React.Component {
@@ -12,23 +12,20 @@ class RoomPage extends React.Component {
       place_id: [],
       detailedArray: [],
       places_review: []
-      // eslint-disable-next-line
     }
-  
-  
-  
   api_call_function () {
     const food_input = "restaurants";
-    const location_input = "berkeley";
+    const location_input = "94607";
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
     axios.get("https://cors-anywhere.herokuapp.com/" + "https://maps.googleapis.com/maps/api/place/textsearch/json?query=+"+food_input+"+in+"+location_input+"+&key="+api_key)
     .then(res => {
       const array_of_places = res.data.results;
+      array_of_places.length = 10;
       const places_id = array_of_places.map(place => place.place_id);
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
     });
-  }
+  } 
 
   api_places_details(places_id) {
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
@@ -42,8 +39,20 @@ class RoomPage extends React.Component {
         this.setState({detailedArray: place_holder});
         })
       })
-      
     };
+
+
+    addVotes = element => {
+      // element.preventDefault();
+      const db = firebase.firestore();
+      db.settings({
+        timestampsInSnapshots: true
+      });
+      const elementRef = db.collection("Users").add({
+        id: this.state.place_id
+      });  
+    };
+
 
   componentDidMount() {
     this.api_call_function();
@@ -58,15 +67,13 @@ class RoomPage extends React.Component {
     return (
       <div>
       <h1> Welcome to The Byte App!</h1>
-      {/* {this.state.detailedArray.length ? ( */}
             <div>
-                {/* {this.state.detailedArray.map(chicken => ( */}
                   <Container> 
-      <Row >
+      <Row>
           {this.state.detailedArray.map(place=>(
       <Col size="3">
-           <div className="card wholecard" style={{width: '18rem', height: '30rem'}}>
-            <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
+           <div className="card wholecard" style={{position: 'relative', width: '18rem', height: '30rem'}}>
+            <img className="card-img-top" style={{position: 'relative', width: '18rem', height: '10rem', borderRadius: 5}} src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${api_key}`} alt="Restaurant" />
             <div className="card-body">
               <h5 className="card-title">{place.name}</h5>
               <p className="card-text text-center">Rating: {place.rating}/5</p>
@@ -75,26 +82,16 @@ class RoomPage extends React.Component {
               <p className="card-text text-center">Address: {place.formatted_address}</p>
               <form action="" className="btn btn-default yes" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
               <form action="" className="btn btn-default no" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form>
-  
             </div>
           </div>
         </Col>
       ))}
        </Row>
         </Container>
-                    
             </div>  
-            </div>      
-                  
-    )        
+      </div>  
+    )
   }
 };
 
 export default RoomPage;
-
-           
-{/*               
-            ) : (
-              <h3>No Results to Display</h3>
-            )} */}
-     {/* </div> */}
