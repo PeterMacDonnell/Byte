@@ -1,4 +1,5 @@
 const express = require("express");
+// Sup mah dooodez
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -20,7 +21,7 @@ app.use(routes);
 // mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/byte",
+  process.env.MONGODB_URI || "mongodb://localhost/byte", { useNewUrlParser: true}
 );
 
 
