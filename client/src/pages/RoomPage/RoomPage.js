@@ -33,7 +33,7 @@ class RoomPage extends React.Component {
     const place_holder = []; 
     // console.log(places_id);
     places_id.forEach(element => {
-      axios.get("https://cors-anywhere.herokuapp.com/"+"https://maps.googleapis.com/maps/api/place/details/json?placeid="+element+"&fields=photo,name,rating,price_level,formatted_address,id,formatted_phone_number,scope,type,opening_hours,website,review&key="+api_key)
+      axios.get("https://cors-anywhere.herokuapp.com/"+"https://maps.googleapis.com/maps/api/place/details/json?placeid="+element+"&fields=photo,name,rating,price_level,vicinity,id,formatted_phone_number,scope,type,opening_hours,website,review&key="+api_key)
       .then(res => {
         console.log(res)
         place_holder.push(res.data.result)
@@ -82,7 +82,7 @@ class RoomPage extends React.Component {
               <p className="card-text text-center">Rating: {place.rating}/5</p>
               <p className="card-text text-center">Price: {place.price_level}/4</p>
               <p className="card-text text-center">Phone: {place.formatted_phone_number}</p>
-              <p className="card-text text-center">Address: {place.formatted_address}</p>
+              <p className="card-text text-center">Address: {place.vicinity}</p>
               <form action="" className="btn btn-default yes" method="post"> <button name="Yes" id={place.place_id} value="1" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b'}} >Yes</button></form>
               <form action="" className="btn btn-default no" method="post"> <button name="No" id={place.place_id}  value="0" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#F6422B'}} >No</button></form>
             </div>
