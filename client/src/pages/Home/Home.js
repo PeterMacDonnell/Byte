@@ -63,6 +63,10 @@ export default class Home extends React.Component {
       // Automatically join that room
       // Make API call and save info to room id number
 
+      function getRoomNumber(1000, 9999) {
+        return Math.floor(Math.random() * Math.floor(9999 - 1000) + 1000);
+      }
+      //check math.floor and math.random?
       // Logic for joinRoom
       // Enter 4 digit code into form and submit
       // Search through DB for matching 4 digit code

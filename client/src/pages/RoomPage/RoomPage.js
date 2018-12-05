@@ -43,7 +43,6 @@ class RoomPage extends React.Component {
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
       console.log(array_of_places,"AP");
-      const db = firebase.firestore();
     })
   }
 
@@ -71,6 +70,9 @@ console.log('place',place, 'vote', vote, 'index', index)
     const oldDetailedArray = this.state.detailedArray;
     const newDetailedArray = oldDetailedArray.slice(0, index).concat(oldDetailedArray.slice(index + 1));
     this.setState({detailedArray: newDetailedArray});
+    if (newDetailedArray == 0){
+      alert('thanks!')
+    }
 
     // official advanced method
     // this.setState((prevState) => {
@@ -83,21 +85,32 @@ console.log('place',place, 'vote', vote, 'index', index)
 
     // FIREBASE SECTION
   const db = firebase.firestore();
+  let colRef = db.collection('rooms')
+
+/// Batch Thing //
+const batch = db.batch();
+
+// const detailedArray = this.statedetailedArray
+  let ref = colRef.doc(`${place.id}`)
+  batch.set(ref, {
+    vote: `${vote}`,
+  })
+
+return batch.commit()
+  .then(data => {
+    console.log('good')
+  })
+  .catch(error => {
+    console.log('there is an error')
+  })
  
-  const id = place.id; // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
+  // const id = place.id; // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
   // const vote = place.vote; // 'yes' or 'no'
 
-  const data = {
-  places_id: id, 
 
-  };
- console.log('data', data)
 
- 
-//   // Add a new document in collection "rooms" with ID 'roomNumber'
-// 
-
-db.collection('room_id').get()
+//GET REQUEST SNAPSHOT
+db.collection('rooms').get()
   .then((snapshot) => {
     snapshot.forEach((doc) => {
       console.log(doc.id, '=>', doc.data());
