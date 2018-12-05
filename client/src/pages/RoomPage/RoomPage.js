@@ -24,6 +24,7 @@ class RoomPage extends React.Component {
       const places_id = array_of_places.map(place => place.place_id);
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
+      console.log("AP",array_of_places)
     });
   } 
 
@@ -41,6 +42,7 @@ class RoomPage extends React.Component {
       })
     };
 
+    
 
     addVotes = element => {
       // element.preventDefault();
@@ -52,6 +54,18 @@ class RoomPage extends React.Component {
         id: this.state.place_id
       });  
     };
+
+     // axios post request, not sure what we would be sending over
+    //  yesAndNo(){
+    //   axios.post('/room' {
+    //     key: value,
+    //     key: value
+    //   }).then(function(response){
+    //     console.log(response);
+    //   }).catch(function(error){
+    //     console.log(error);
+    //   });
+    // }
 
 
   componentDidMount() {
