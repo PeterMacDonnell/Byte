@@ -1,10 +1,14 @@
 import React from "react";
 import axios from "axios";
 // eslint-disable-next-line
-import{ firebase } from "../../firebase/index";
-// import '../../Components/Choice/Choice';
+// import{ firebase, db } from "../../firebase/index";
 import {Col, Container, Row} from '../../Components/Grid/index';
-// import {Card} from '../Choice/Card';
+import 'firebase/firestore';
+import firebase from 'firebase/app';
+
+
+
+
 class RoomPage extends React.Component {
 
    state = {
@@ -12,8 +16,23 @@ class RoomPage extends React.Component {
       place_id: [],
       detailedArray: [],
       places_review: [],
-      crystalsFavoriteCoffee: 'starbucks'
+      crystalsFavoriteCoffee: 'starbucks',
+      // roomNumber: [],
     }
+
+  // generateRoomNumber () {
+  //   const roomNumber = Math.floor(1000 + Math.random() * 9000);
+  //   // return roomNumber
+  //   console.log('rn',roomNumber)
+  //   const db = firebase.firestore();
+  //   const data = {
+  //     individulRoomNumber: roomNumber,
+  //     };
+  //    console.log('data', data)
+  //     // Add a new document in collection "rooms" with ID 'roomNumber'
+  //    const setDoc = db.collection('rooms').doc('roomNumber').set(data)
+  // };
+
   api_call_function () {
     const food_input = "restaurants";
     const location_input = "94607";
@@ -46,7 +65,7 @@ class RoomPage extends React.Component {
 
   addVotes = (place, vote, index) => {
     // REMOVE CARD FROM PAGE:
-
+console.log('place',place, 'vote', vote, 'index', index)
     // traditional method
     const oldDetailedArray = this.state.detailedArray;
     const newDetailedArray = oldDetailedArray.slice(0, index).concat(oldDetailedArray.slice(index + 1));
@@ -61,33 +80,64 @@ class RoomPage extends React.Component {
     //   };
     // });
 
-
     // FIREBASE SECTION
+  const db = firebase.firestore();
+ 
+  const id = place.id; // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
+  // const vote = place.vote; // 'yes' or 'no'
 
-    const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true
-    });
-    const elementRef = db.collection("Users").add({
-      id: place.id, // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
-      vote: place.vote, // 'yes' or 'no'
-    });
+  const data = {
+  id: id, 
+  vote: vote,
   };
+ console.log('data', data)
+
+ 
+//   // Add a new document in collection "rooms" with ID 'roomNumber'
+//  const setDoc = db.collection('rooms').doc('roomNumber').set(data);
+
+const voteRef = db.collection('rooms').doc('roomNumber');
+const transaction = db.runTransaction(t => {
+  return t.get(voteRef)
+    .then(doc => {
+      const newVote = doc.data().vote + 1;
+      if (newVote <= 1000000) {
+        t.update(voteRef, {vote: newVote});
+        return Promise.resolve('vote increased to ' + newVote);
+      } else {
+        return Promise.reject('Sorry! vote is too big.');
+      }
+    });
+}).then(result => {
+  console.log('Transaction success', result);
+}).catch(err => {
+  console.log('Transaction failure:', err);
+});
+  
+
+};
+
+
+  
+
+ 
 
 
   componentDidMount() {
     this.api_call_function();
+   ;
   }
 
 
 
   render() {
-
+    
     console.log('in RoomPage, props:', this.props);
 
     const api_key = "AIzaSyA7KHhrTUzj_S8Vo1hiPjVMsZKdXKfzpv4";
     console.log('this.state.detailedArray:', this.state.detailedArray)
     return (
+      
       <div>
         <h1> Welcome to The Byte App!</h1>
         <div>
@@ -103,8 +153,8 @@ class RoomPage extends React.Component {
                       <p className="card-text text-center">Price: {place.price_level}/4</p>
                       <p className="card-text text-center">Phone: {place.formatted_phone_number}</p>
                       <p className="card-text text-center">Address: {place.formatted_address}</p>
-                      <button onClick={() => this.addVotes(place, 'yes', index)} name="Yes" id={place.place_id} value="1" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b'}} >Yes</button>
-                      <button onClick={() => this.addVotes(place, 'no', index)} name="No" id={place.place_id}  value="0" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#F6422B'}} >No</button>
+                      <button onClick={() => this.addVotes(place, 1, index)} name="Yes" id={place.place_id} value="1" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b'}} >Yes</button>
+                      <button onClick={() => this.addVotes(place, 0, index)} name="No" id={place.place_id}  value="0" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#F6422B'}} >No</button>
                     </div>
                   </div>
                 </Col>
