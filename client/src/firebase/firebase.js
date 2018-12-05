@@ -4,10 +4,6 @@ import 'firebase/firestore';
 // import firebase from 'firebase/app';
 // import 'firebase/firestore';
 
-
-
-
-
 const config = {
     apiKey: "AIzaSyC7pIntHRdVBcw0XEDwuUH6b1IGLfi0Wgk",
     authDomain: "byte-app-1538515658350.firebaseapp.com",
