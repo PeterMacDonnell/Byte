@@ -20,18 +20,18 @@ class RoomPage extends React.Component {
       // roomNumber: [],
     }
 
-  // generateRoomNumber () {
-  //   const roomNumber = Math.floor(1000 + Math.random() * 9000);
-  //   // return roomNumber
-  //   console.log('rn',roomNumber)
-  //   const db = firebase.firestore();
-  //   const data = {
-  //     individulRoomNumber: roomNumber,
-  //     };
-  //    console.log('data', data)
-  //     // Add a new document in collection "rooms" with ID 'roomNumber'
-  //    const setDoc = db.collection('rooms').doc('roomNumber').set(data)
-  // };
+  generateRoomNumber () {
+    const roomNumber = Math.floor(1000 + Math.random() * 9000);
+    // return roomNumber
+    console.log('rn',roomNumber)
+    const db = firebase.firestore();
+    const data = {
+      individulRoomNumber: roomNumber,
+      };
+     console.log('data', data)
+      // Add a new document in collection "rooms" with ID 'roomNumber'
+     const setDoc = db.collection('rooms').doc('roomNumber').set(data)
+  };
 
   api_call_function () {
     const food_input = "restaurants";
@@ -45,6 +45,7 @@ class RoomPage extends React.Component {
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
       console.log(array_of_places,"AP");
+      const db = firebase.firestore();
     })
   }
 
@@ -58,6 +59,7 @@ class RoomPage extends React.Component {
         console.log(res)
         place_holder.push(res.data.result)
         this.setState({detailedArray: place_holder});
+     
         })
       })
     };
@@ -87,13 +89,14 @@ console.log('place',place, 'vote', vote, 'index', index)
   // const vote = place.vote; // 'yes' or 'no'
 
   const data = {
-  id: id, 
-  vote: vote,
+  places_id: id, 
+
   };
  console.log('data', data)
 
  
 //   // Add a new document in collection "rooms" with ID 'roomNumber'
+<<<<<<< HEAD
 //  const setDoc = db.collection('rooms').doc('roomNumber').set(data);
 
 const voteRef = db.collection('room_id').doc('places_id');
@@ -107,12 +110,39 @@ const transaction = db.runTransaction(t => {
       } else {
         return Promise.reject('Sorry! vote is too big.');
       }
+=======
+// 
+
+db.collection('room_id').get()
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+      console.log(doc.id, '=>', doc.data());
+      console.log('ss', snapshot)
+>>>>>>> 8223e8ee66973f09127c9475b4ad034916a17224
     });
-}).then(result => {
-  console.log('Transaction success', result);
-}).catch(err => {
-  console.log('Transaction failure:', err);
-});
+  })
+  .catch((err) => {
+    console.log('Error getting documents', err);
+  });
+
+// const voteRef = db.collection('places_id').doc('vote');
+// const transaction = db.runTransaction(t => {
+//   return t.get(voteRef)
+//     .then(doc => {
+//       const id = id;
+//       const newVote = doc.data().vote + vote;
+//       if (newVote <= 1000000) {
+//         t.update(voteRef, {vote: newVote});
+//         return Promise.resolve('vote increased to ' + newVote);
+//       } else {
+//         return Promise.reject('Sorry! vote is too big.');
+//       }
+//     });
+// }).then(result => {
+//   console.log('Transaction success', result);
+// }).catch(err => {
+//   console.log('Transaction failure:', err);
+// });
   
 
 };
@@ -125,7 +155,7 @@ const transaction = db.runTransaction(t => {
 
   componentDidMount() {
     this.api_call_function();
-   ;
+   
   }
 
 
