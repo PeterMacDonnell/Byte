@@ -24,7 +24,8 @@ class RoomPage extends React.Component {
       const places_id = array_of_places.map(place => place.place_id);
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
-    });
+      console.log(array_of_places,"AP");
+    })
   } 
 
   api_places_details(places_id) {
@@ -57,6 +58,8 @@ class RoomPage extends React.Component {
   componentDidMount() {
     this.api_call_function();
   }
+
+
 
   render() {
 

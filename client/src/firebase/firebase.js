@@ -1,4 +1,6 @@
 import firebase from 'firebase/app';
+require('firebase/database');
+
 
 
 const config = {
@@ -10,8 +12,12 @@ const config = {
     messagingSenderId: "1090937809988"
   };
   firebase.initializeApp(config);
+  
 
 if (!firebase.apps.length){
-  firebase.initializeApp(config);
-}
+  firebase.initializeApp(config);}
+
+const database = firebase.database();
+ 
+
 export default firebase;
