@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 // eslint-disable-next-line
 import{ firebase } from "../../firebase/index";
+import 'firebase.firestore'
 // import '../../Components/Choice/Choice';
 import {Col, Container, Row} from '../../Components/Grid/index';
 // import {Card} from '../Choice/Card';
