@@ -72,6 +72,9 @@ console.log('place',place, 'vote', vote, 'index', index)
     const oldDetailedArray = this.state.detailedArray;
     const newDetailedArray = oldDetailedArray.slice(0, index).concat(oldDetailedArray.slice(index + 1));
     this.setState({detailedArray: newDetailedArray});
+    if (newDetailedArray == 0){
+      alert('thanks!')
+    }
 
     // official advanced method
     // this.setState((prevState) => {
@@ -95,7 +98,6 @@ const batch = db.batch();
     vote: `${vote}`,
   })
 
-
 return batch.commit()
   .then(data => {
     console.log('good')
@@ -110,7 +112,7 @@ return batch.commit()
 
 
 //GET REQUEST SNAPSHOT
-db.collection('room_id').get()
+db.collection('rooms').get()
   .then((snapshot) => {
     snapshot.forEach((doc) => {
       console.log(doc.id, '=>', doc.data());
