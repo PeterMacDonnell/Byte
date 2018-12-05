@@ -45,7 +45,10 @@ class RoomPage extends React.Component {
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
       console.log(array_of_places,"AP");
+<<<<<<< HEAD
       const db = firebase.firestore().collection("room_id");
+=======
+>>>>>>> 710306394a19fa93e7e19a147672284bd1d9fc9f
     })
   }
 
@@ -63,6 +66,7 @@ class RoomPage extends React.Component {
       })
     };
 
+    
 
   addVotes = (place, vote, index) => {
     // REMOVE CARD FROM PAGE:
@@ -83,20 +87,33 @@ console.log('place',place, 'vote', vote, 'index', index)
 
     // FIREBASE SECTION
   const db = firebase.firestore();
+  let colRef = db.collection('rooms')
+
+/// Batch Thing //
+const batch = db.batch();
+
+// const detailedArray = this.statedetailedArray
+place.forEach(c => {
+  let ref = colRef.doc(`${c.place.id}`)
+  batch.set(ref, {
+    vote: `${c.vote}`,
+  })
+})
+
+return batch.commit()
+  .then(data => {
+    console.log('good')
+  })
+  .catch(error => {
+    console.log('there is an error')
+  })
  
-  const id = place.id; // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
+  // const id = place.id; // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
   // const vote = place.vote; // 'yes' or 'no'
 
-  const data = {
-  places_id: id, 
 
-  };
- console.log('data', data)
 
- 
-//   // Add a new document in collection "rooms" with ID 'roomNumber'
-// 
-
+//GET REQUEST SNAPSHOT
 db.collection('room_id').get()
   .then((snapshot) => {
     snapshot.forEach((doc) => {
@@ -134,6 +151,18 @@ db.collection('room_id').get()
   
 
  
+
+     // axios post request, not sure what we would be sending over
+    //  yesAndNo(){
+    //   axios.post('/room' {
+    //     key: value,
+    //     key: value
+    //   }).then(function(response){
+    //     console.log(response);
+    //   }).catch(function(error){
+    //     console.log(error);
+    //   });
+    // }
 
 
   componentDidMount() {
