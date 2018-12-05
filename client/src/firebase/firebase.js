@@ -1,5 +1,8 @@
-import firebase from 'firebase/app';
+import * as firebase from 'firebase';
+import 'firebase/firestore';
 
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
 const config = {
     apiKey: "AIzaSyC7pIntHRdVBcw0XEDwuUH6b1IGLfi0Wgk",
@@ -10,8 +13,23 @@ const config = {
     messagingSenderId: "1090937809988"
   };
   firebase.initializeApp(config);
+  
 
 if (!firebase.apps.length){
-  firebase.initializeApp(config);
-}
-export default firebase;
+  firebase.initializeApp(config);}
+
+  //advised by console log
+  const firestore = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  firestore.settings(settings);
+  // const timestamp = snapshot.get('created_at');
+  // const date = timestamp.toDate();
+
+  const db = firebase.firestore().collection("rooms");
+
+  // db.settings({
+  //   timestampsInSnapshots: true
+  // });
+ 
+
+export default {firebase, db};
