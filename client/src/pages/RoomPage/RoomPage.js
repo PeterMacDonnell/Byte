@@ -96,12 +96,12 @@ console.log('place',place, 'vote', vote, 'index', index)
 //   // Add a new document in collection "rooms" with ID 'roomNumber'
 //  const setDoc = db.collection('rooms').doc('roomNumber').set(data);
 
-const voteRef = db.collection('rooms').doc('roomNumber');
+const voteRef = db.collection('room_id').doc('places_id');
 const transaction = db.runTransaction(t => {
   return t.get(voteRef)
     .then(doc => {
       const newVote = doc.data().vote + 1;
-      if (newVote <= 1000000) {
+      if (newVote <= 100) {
         t.update(voteRef, {vote: newVote});
         return Promise.resolve('vote increased to ' + newVote);
       } else {
