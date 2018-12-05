@@ -90,12 +90,11 @@ console.log('place',place, 'vote', vote, 'index', index)
 const batch = db.batch();
 
 // const detailedArray = this.statedetailedArray
-place.forEach(c => {
-  let ref = colRef.doc(`${c.place.id}`)
+  let ref = colRef.doc(`${place.id}`)
   batch.set(ref, {
-    vote: `${c.vote}`,
+    vote: `${vote}`,
   })
-})
+
 
 return batch.commit()
   .then(data => {
