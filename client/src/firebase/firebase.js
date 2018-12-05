@@ -1,5 +1,10 @@
-import firebase from 'firebase/app';
-require('firebase/database');
+import * as firebase from 'firebase';
+import 'firebase/firestore';
+
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
+
+
 
 
 
@@ -17,7 +22,18 @@ const config = {
 if (!firebase.apps.length){
   firebase.initializeApp(config);}
 
-const database = firebase.database();
+  //advised by console log
+  const firestore = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  firestore.settings(settings);
+  // const timestamp = snapshot.get('created_at');
+  // const date = timestamp.toDate();
+
+  const db = firebase.firestore().collection("rooms");
+
+  // db.settings({
+  //   timestampsInSnapshots: true
+  // });
  
 
-export default firebase;
+export default {firebase, db};
