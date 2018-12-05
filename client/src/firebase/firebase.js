@@ -20,16 +20,16 @@ if (!firebase.apps.length){
 
   //advised by console log
   const firestore = firebase.firestore();
-  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  const settings = {timestampsInSnapshots: true};
   firestore.settings(settings);
   // const timestamp = snapshot.get('created_at');
   // const date = timestamp.toDate();
 
-  const db = firebase.firestore().collection("rooms");
+  // const db = firebase.firestore().collection("rooms");
 
   // db.settings({
   //   timestampsInSnapshots: true
   // });
  
 
-export default {firebase, db};
+export default {firebase};
