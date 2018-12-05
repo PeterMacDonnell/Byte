@@ -153,8 +153,8 @@ const transaction = db.runTransaction(t => {
                       <p className="card-text text-center">Price: {place.price_level}/4</p>
                       <p className="card-text text-center">Phone: {place.formatted_phone_number}</p>
                       <p className="card-text text-center">Address: {place.formatted_address}</p>
-                      <button onClick={() => this.addVotes(place, 1, index)} name="Yes" id={place.place_id} value="1" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b'}} >Yes</button>
-                      <button onClick={() => this.addVotes(place, 0, index)} name="No" id={place.place_id}  value="0" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#F6422B'}} >No</button>
+                      <button onClick={() => this.addVotes(place, 1, index)} name="Yes" id={place.place_id} value="true" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b'}} >Yes</button>
+                      <button onClick={() => this.addVotes(place, 0, index)} name="No" id={place.place_id}  value="false" style={{fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#F6422B'}} >No</button>
                     </div>
                   </div>
                 </Col>
