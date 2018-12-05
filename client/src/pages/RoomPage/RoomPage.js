@@ -96,21 +96,6 @@ console.log('place',place, 'vote', vote, 'index', index)
 
  
 //   // Add a new document in collection "rooms" with ID 'roomNumber'
-<<<<<<< HEAD
-//  const setDoc = db.collection('rooms').doc('roomNumber').set(data);
-
-const voteRef = db.collection('room_id').doc('places_id');
-const transaction = db.runTransaction(t => {
-  return t.get(voteRef)
-    .then(doc => {
-      const newVote = doc.data().vote + 1;
-      if (newVote <= 100) {
-        t.update(voteRef, {vote: newVote});
-        return Promise.resolve('vote increased to ' + newVote);
-      } else {
-        return Promise.reject('Sorry! vote is too big.');
-      }
-=======
 // 
 
 db.collection('room_id').get()
@@ -118,7 +103,6 @@ db.collection('room_id').get()
     snapshot.forEach((doc) => {
       console.log(doc.id, '=>', doc.data());
       console.log('ss', snapshot)
->>>>>>> 8223e8ee66973f09127c9475b4ad034916a17224
     });
   })
   .catch((err) => {
