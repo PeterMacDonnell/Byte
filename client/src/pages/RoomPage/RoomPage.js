@@ -45,7 +45,7 @@ class RoomPage extends React.Component {
       this.setState({array_of_places: array_of_places});
       this.api_places_details(places_id);
       console.log(array_of_places,"AP");
-      const db = firebase.firestore();
+      const db = firebase.firestore().collection("room_id");
     })
   }
 
@@ -58,8 +58,7 @@ class RoomPage extends React.Component {
       .then(res => {
         console.log(res)
         place_holder.push(res.data.result)
-        this.setState({detailedArray: place_holder});
-     
+        this.setState({detailedArray: place_holder});     
         })
       })
     };
