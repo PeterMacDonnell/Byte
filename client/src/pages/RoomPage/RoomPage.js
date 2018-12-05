@@ -64,6 +64,7 @@ class RoomPage extends React.Component {
       })
     };
 
+    
 
   addVotes = (place, vote, index) => {
     // REMOVE CARD FROM PAGE:
@@ -135,6 +136,18 @@ db.collection('room_id').get()
   
 
  
+
+     // axios post request, not sure what we would be sending over
+    //  yesAndNo(){
+    //   axios.post('/room' {
+    //     key: value,
+    //     key: value
+    //   }).then(function(response){
+    //     console.log(response);
+    //   }).catch(function(error){
+    //     console.log(error);
+    //   });
+    // }
 
 
   componentDidMount() {
