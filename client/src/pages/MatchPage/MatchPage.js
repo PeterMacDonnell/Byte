@@ -5,9 +5,9 @@ export default class roomPage extends React.Component{
     render() {
     return(
     <Container>
-        <Row>
-            <Col size="12">
-                <div className="card wholecard" style={{width: '18rem', height: '30rem'}}>
+        <Row style={{}}>
+            <Col size="12" style={{}}>
+                <div className="card wholecard" style={{ width: '18rem', height: '30rem'}}>
                     <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={"https://www.cornerstoneberkeley.com/files/2017/05/Cornerstone-Berkeley15.jpg"} alt="Restaurant" />
                     <div className="card-body">
                     <h5 className="card-title">{"CornerStone"}</h5>
