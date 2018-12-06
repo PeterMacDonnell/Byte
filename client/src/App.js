@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import RoomPage from "./pages/RoomPage";
 import NoMatch from "./pages/NoMatch";
 import Matchpage from "./pages/MatchPage";
+import FoundPage from "./pages/FoundPage";
 import DocumentTitle from "react-document-title";
 import {Col,Row,Grid} from "react-bootstrap";
 import Navbar from "./Components/Navbar/Navbar";
@@ -25,6 +26,9 @@ const App = () => (
           <Route exact path="/home" component={Home} />
           <Route exact path = "/room" component={RoomPage}/>
           <Route exact path = "/match" component = {Matchpage} />
+       {/* wooooowwwwwwwwwwww */}
+       <Route exact path = "/foundmatch" component = {FoundPage} />
+
           <Route component={NoMatch}/>  
         </Switch>
       </div>
