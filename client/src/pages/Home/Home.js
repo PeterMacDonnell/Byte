@@ -59,7 +59,7 @@ export default class Home extends React.Component {
                     <FormGroup
                       controlId="homePage" 
                     >
-                    <p className="card-text text-center">What's your name?</p>
+                    <p className="card-text text-center">What is your name?</p>
                       <FormControl
                         type="text"
                         name={this.state.value}
@@ -72,7 +72,7 @@ export default class Home extends React.Component {
 
                   <p className="card-text text-center">What would you like to do?</p>
 
-                   <button href="/room" onClick={() =>  this.props.history.push('/room')} name="Create a Room" id={1} value="" style={{ contentAlign: 'center', fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
+                   <button href="/room" onClick={() =>  this.props.history.push('/room')} name="Create a Room" id={1} value="" style={{ marginLeft: 'auto', marginRight: 'auto', width: '100%', fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
                   <p/>
                   <p style={{textAlign: 'center'}}>or</p>
                   <form>
@@ -87,7 +87,7 @@ export default class Home extends React.Component {
                     </FormGroup>
 
                   </form>
-                  <button onClick={() => this.props.history.push('/room')} name="Join a Room" id={2} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
+                  <button onClick={() => this.props.history.push('/room')} name="Join a Room" id={2} value="" style={{ marginLeft: 'auto', marginRight: 'auto', width: '100%', fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
 
                 </div>
               </div>
