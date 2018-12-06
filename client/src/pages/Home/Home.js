@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
 // import  * from '../../utils';
 import Choice from '../../Components/Choice/Choice';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -14,16 +15,27 @@ export default class Home extends React.Component {
   state = {
     name: [],
     number:[],
+    redirect: false,
   }
  
-  createRoom() {
+  createRoom = () => {
   }
   
   handleChange = e => {
     this.setState({ value: e.target.value });
   }
 
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
 
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/room' />
+    }
+  }
 
   render() {
     return (
@@ -59,7 +71,7 @@ export default class Home extends React.Component {
 
                   <p className="card-text text-center">What would you like to do?</p>
 
-                  <button onClick={() => this.createRoom()} name="Create a Room" id={1} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room</button>
+                   <button href="/room" onClick={() =>  this.props.history.push('/room')} name="Create a Room" id={1} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
                   <p/>
                   <p>or</p>
                   <form>
@@ -75,7 +87,8 @@ export default class Home extends React.Component {
                     </FormGroup>
 
                   </form>
-                  <button onClick={() => this.joinRoom()} type= "submit" name="Join a Room" id={2} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
+                  {/* {this.renderRedirect()} */}
+                  <button onClick={() => this.props.history.push('/room')} name="Join a Room" id={2} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
 
                 </div>
               </div>
