@@ -33,8 +33,8 @@ export default class roomPage extends React.Component{
         <Row>
             <Col size="4"/>
             <Col size="4" style= {{}}>
-                <div className="card wholecard" style={{ width: '18rem', height: '25rem'}}>
-                    <img className="card-img-top" style={{width: '18rem', height: '25rem'}} src={"https://i.imgur.com/4KRisDz.png"} alt="Restaurant" />
+                <div className="card wholecard" style={{ width: '18rem', height: '28rem'}}>
+                    <img className="card-img-top" style={{width: '18rem', height: '28rem'}} src={"https://i.imgur.com/4KRisDz.png"} alt="Restaurant" />
                     <div className="card-body">
                     <h5 className="card-title">Thanks for using The Byte App! A match will be up shortly.</h5>
                     </div>
