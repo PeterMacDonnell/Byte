@@ -50,8 +50,8 @@ export default class Home extends React.Component {
           <Row>
           <Col size="4"/>
             <Col size="4">
-              <div className="card wholecard" style={{ width: '19rem', height: '38rem' }}>
-                <img className="card-img-top" style={{ width: '19rem', height: '38rem' }} src={"https://i.imgur.com/4KRisDz.png"} alt="ByteLogo" />
+              <div className="card wholecard" style={{ width: '19rem', height: '40rem' }}>
+                <img className="card-img-top" style={{ width: '19rem', height: '40rem' }} src={"https://i.imgur.com/4KRisDz.png"} alt="ByteLogo" />
                 <div className="card-body">
                   <h5 className="card-title">{"Home Page"}</h5>
 
@@ -59,10 +59,11 @@ export default class Home extends React.Component {
                     <FormGroup
                       controlId="homePage" 
                     >
+                    <p className="card-text text-center">What's your name?</p>
                       <FormControl
                         type="text"
                         name={this.state.value}
-                        placeholder="Enter your name"
+                        placeholder="Enter Your Name"
                         onChange={this.handleChange}
                       />
                       <FormControl.Feedback />
@@ -71,9 +72,9 @@ export default class Home extends React.Component {
 
                   <p className="card-text text-center">What would you like to do?</p>
 
-                   <button href="/room" onClick={() =>  this.props.history.push('/room')} name="Create a Room" id={1} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
+                   <button href="/room" onClick={() =>  this.props.history.push('/room')} name="Create a Room" id={1} value="" style={{ contentAlign: 'center', fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
                   <p/>
-                  <p>or</p>
+                  <p style={{textAlign: 'center'}}>or</p>
                   <form>
                     <FormGroup controlId="homePage">
                       <FormControl
@@ -81,13 +82,11 @@ export default class Home extends React.Component {
                         number={this.state.value}
                         placeholder="Enter Room Code"
                         onChange={this.handleChange}
-                        // validationState={this.getValidationState()}
                       />
                       <FormControl.Feedback />
                     </FormGroup>
 
                   </form>
-                  {/* {this.renderRedirect()} */}
                   <button onClick={() => this.props.history.push('/room')} name="Join a Room" id={2} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
 
                 </div>
