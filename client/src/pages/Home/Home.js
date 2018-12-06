@@ -71,7 +71,7 @@ export default class Home extends React.Component {
 
                   <p className="card-text text-center">What would you like to do?</p>
 
-                   <button href="/room" onClick={() => this.createRoom()} name="Create a Room" id={1} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
+                   <button href="/room" onClick={() =>  this.props.history.push('/room')} name="Create a Room" id={1} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Create a Room </button>
                   <p/>
                   <p>or</p>
                   <form>
@@ -88,7 +88,7 @@ export default class Home extends React.Component {
 
                   </form>
                   {/* {this.renderRedirect()} */}
-                  <button onClick={() => this.joinRoom()} name="Join a Room" id={2} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
+                  <button onClick={() => this.props.history.push('/room')} name="Join a Room" id={2} value="" style={{ fontSize: '16px', fontFamily: 'Raleway, sans serif', backgroundColor: '#D0DE4b' }}>Join a Room</button>
 
                 </div>
               </div>
