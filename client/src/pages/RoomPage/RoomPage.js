@@ -16,14 +16,15 @@ class RoomPage extends React.Component {
       place_id: [],
       detailedArray: [],
       places_review: [],
+      
     }
 
   generateRoomNumber () {
-    const roomNumber = Math.floor(1000 + Math.random() * 9000);
+    let roomNumber = Math.floor(1000 + Math.random() * 9000);
     // return roomNumber
     console.log('rn',roomNumber)
     const db = firebase.firestore();
-    const data = {
+    let data = {
       individulRoomNumber: roomNumber,
       };
      console.log('data', data)
@@ -65,7 +66,7 @@ class RoomPage extends React.Component {
 
   addVotes = (place, vote, index) => {
     // REMOVE CARD FROM PAGE:
-console.log('place',place, 'vote', vote, 'index', index)
+    console.log('place',place, 'vote', vote, 'index', index)
     // traditional method
     const oldDetailedArray = this.state.detailedArray;
     const newDetailedArray = oldDetailedArray.slice(0, index).concat(oldDetailedArray.slice(index + 1));
@@ -91,7 +92,7 @@ console.log('place',place, 'vote', vote, 'index', index)
   let colRef = db.collection('rooms')
 
 /// Batch Thing //
-const batch = db.batch();
+  const batch = db.batch();
 
 // const detailedArray = this.statedetailedArray
   let ref = colRef.doc(`${place.id}`)
