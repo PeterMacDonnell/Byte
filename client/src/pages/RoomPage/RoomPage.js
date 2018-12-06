@@ -20,9 +20,11 @@ class RoomPage extends React.Component {
     }
 
   generateRoomNumber () {
-    const roomNumber = Math.floor(1000 + Math.random() * 9000);
+    let roomNumber = (Math.floor(1000 + Math.random() * 9000)).toString();
     // return roomNumber
     console.log('rn',roomNumber)
+    console.log("testString", roomNumber)
+    console.log(typeof roomNumber)
     const db = firebase.firestore();
     const data = {
       roomNumber: roomNumber,
