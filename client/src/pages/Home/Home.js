@@ -12,48 +12,17 @@ import { Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 export default class Home extends React.Component {
 
   state = {
-    value: [],
-
+    name: [],
+    number:[],
   }
-  // Logic for enterName
-  // Enter your name
-  // enter name into db and create user id
-
-  // class FormExample extends React.Component {
-  //   constructor(props, context) {
-  //     super(props, context);
-
-  //     this.handleChange = this.handleChange.bind(this);
-
-  //     this.state = {
-  //       value: ''
-  //     };
-  //   }
-
-
-  // getValidationState() {
-  //   const codeLength = this.state.value.length;
-  //   if (codeLength = 4) return 'success';
-  //   else if (codeLength > 4) return 'error';
-  //   return null;
-  // }
-
-  // Logic for createRoom
+ 
   createRoom() {
-
   }
-  // Generate random 4 digit code and save as room id number
-  // Automatically join that room
-  // Make API call and save info to room id number
-
-  // Logic for joinRoom
-  // Enter 4 digit code into form and submit
-  // Search through DB for matching 4 digit code
-  // Add user to room, show them cards
-
-  handleChange(e) {
+  
+  handleChange = e => {
     this.setState({ value: e.target.value });
   }
+
 
 
   render() {
@@ -76,12 +45,11 @@ export default class Home extends React.Component {
 
                   <form>
                     <FormGroup
-                      controlId="homePage"
-                    
+                      controlId="homePage" 
                     >
                       <FormControl
                         type="text"
-                        value={this.state.value}
+                        name={this.state.value}
                         placeholder="Enter your name"
                         onChange={this.handleChange}
                       />
@@ -95,13 +63,10 @@ export default class Home extends React.Component {
                   <p/>
                   <p>or</p>
                   <form>
-                    <FormGroup
-                      controlId="homePage"
-                    
-                    >
+                    <FormGroup controlId="homePage">
                       <FormControl
                         type="text"
-                        value={this.state.value}
+                        number={this.state.value}
                         placeholder="Enter Room Code"
                         onChange={this.handleChange}
                         // validationState={this.getValidationState()}
