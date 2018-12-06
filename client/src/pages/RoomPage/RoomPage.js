@@ -78,7 +78,6 @@ class RoomPage extends React.Component {
       // <Redirect to='/match'  />
       this.props.history.push('/match');
     }
-console.log()
     // official advanced method
     // this.setState((prevState) => {
     //   const oldDetailedArray = prevState.detailedArray;
@@ -87,20 +86,18 @@ console.log()
     //     detailedArray: newDetailedArray,
     //   };
     // });
-    const roomNumber = this.state.roomNumber.toString()
- 
-    // FIREBASE SECTION
-  const db = firebase.firestore();
-  let colRef = db.collection('rooms').doc(roomNumber).add({
-    place: place.id,
-  })
+    // FIREBASE SECTION	   
+    const db = firebase.firestore();	 
+    let colRef = db.collection('rooms')
+   
 
-/// Batch Thing //
-const batch = db.batch();
-let ref = colRef.doc(roomNumber).collection(place.id)
-batch.set(ref, {
-  vote: `${vote}`,
-})
+   /// Batch Thing //	
+  const batch = db.batch();
+  // const detailedArray = this.statedetailedArray	batch.set(ref, {
+    let ref = colRef.doc(`${place.id}`)
+    batch.set(ref, {
+      vote: `${vote}`,	
+    })	
 
 return batch.commit()
   .then(data => {
@@ -116,55 +113,18 @@ return batch.commit()
 
 
 //GET REQUEST SNAPSHOT
-db.collection('rooms').get()
-  .then((snapshot) => {
-    snapshot.forEach((doc) => {
-      console.log(doc.id, '=>', doc.data());
-      console.log('ss', snapshot)
-    });
-  })
-  .catch((err) => {
-    console.log('Error getting documents', err);
-  });
-
-// const voteRef = db.collection('places_id').doc('vote');
-// const transaction = db.runTransaction(t => {
-//   return t.get(voteRef)
-//     .then(doc => {
-//       const id = id;
-//       const newVote = doc.data().vote + vote;
-//       if (newVote <= 1000000) {
-//         t.update(voteRef, {vote: newVote});
-//         return Promise.resolve('vote increased to ' + newVote);
-//       } else {
-//         return Promise.reject('Sorry! vote is too big.');
-//       }
+// db.collection('rooms').get()
+//   .then((snapshot) => {
+//     snapshot.forEach((doc) => {
+//       console.log(doc.id, '=>', doc.data());
+//       console.log('ss', snapshot)
 //     });
-// }).then(result => {
-//   console.log('Transaction success', result);
-// }).catch(err => {
-//   console.log('Transaction failure:', err);
-// });
-  
-
+//   })
+//   .catch((err) => {
+//     console.log('Error getting documents', err);
+//   });
 };
 
-
-  
-
- 
-
-     // axios post request, not sure what we would be sending over
-    //  yesAndNo(){
-    //   axios.post('/room' {
-    //     key: value,
-    //     key: value
-    //   }).then(function(response){
-    //     console.log(response);
-    //   }).catch(function(error){
-    //     console.log(error);
-    //   });
-    // }
     componentWillMount(){
       this.generateRoomNumber();
     }
