@@ -2,6 +2,31 @@ import React, { Component } from "react";
 import {Col, Container, Row} from '../../Components/Grid/index';
 
 export default class roomPage extends React.Component{
+
+    componentWillMount(){
+        setTimeout(() => { 
+            console.log('this ran') 
+            this.props.history.push('/foundmatch');
+    }, 3000)
+    }
+
+
+
+
+
+    // componentDidMount(){
+    //     setTimeout(function(){this.props.history.push('/foundmatch')}, 3000)
+    // }
+
+    
+
+    // componentDidMount(){
+    //     setTimeout(){function(){ alert("Hello"); }, 3000)
+    // }
+    // doWork(callback) {
+    //     setTimeout(() => callback(this.props.history.push('/foundmatch')), 10); 
+    // }
+    // this.props.history.push('/room')
     render() {
     return(
     <Container>
