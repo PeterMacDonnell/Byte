@@ -89,11 +89,11 @@ console.log()
     //     detailedArray: newDetailedArray,
     //   };
     // });
-    const roomNumber = this.state.roomNumber.toString()
+    let roomNumber = this.state.roomNumber
  
     // FIREBASE SECTION
   const db = firebase.firestore();
-  let colRef = db.collection('rooms').doc(roomNumber).add({
+  const colRef = db.collection('rooms').doc(roomNumber).set({
     place: place.id,
   })
 
