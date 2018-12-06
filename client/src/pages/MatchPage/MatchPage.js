@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Col, Container, Row} from '../../Components/Grid/index';
-import React from "react";
 import axios from "axios";
 import 'firebase/firestore';
 import firebase from 'firebase/app';
@@ -19,17 +18,13 @@ getSnapshot(){
 
 const db = firebase.firestore();
 db.collection('rooms').get()
-  .then((snapshot) => {
-    snapshot.forEach((doc) => {
+.then(snapshot => {
+    snapshot.forEach(doc => {
       console.log(doc.id, '=>', doc.data());
-    //   console.log('ma', matchArray);
-    //   this.setState({matchArray: matchArray});
     });
-  
-  .catch((err) => {
+  })
+  .catch(err => {
     console.log('Error getting documents', err);
-
-})
   });
 }
 
