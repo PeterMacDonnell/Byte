@@ -7,7 +7,7 @@ export default class roomPage extends React.Component{
         setTimeout(() => { 
             console.log('this ran') 
             this.props.history.push('/foundmatch');
-    }, 3000)
+    }, 5000)
     }
 
 
