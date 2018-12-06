@@ -75,8 +75,7 @@ export default class Home extends React.Component {
 
                   <form>
                     <FormGroup
-                      controlId="homePage"
-                    
+                      controlId="homePage" 
                     >
                       <FormControl
                         type="text"
@@ -94,10 +93,7 @@ export default class Home extends React.Component {
                   <p/>
                   <p>or</p>
                   <form>
-                    <FormGroup
-                      controlId="homePage"
-                    
-                    >
+                    <FormGroup controlId="homePage">
                       <FormControl
                         type="text"
                         value={this.state.value}
