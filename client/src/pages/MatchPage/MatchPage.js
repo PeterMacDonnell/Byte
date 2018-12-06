@@ -9,7 +9,7 @@ export default class roomPage extends React.Component{
             <Col size="4"/>
             <Col size="4">
                 <div className="card wholecard" style={{width: '18rem', height: '40rem'}}>
-                    <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={"https://www.cornerstoneberkeley.com/files/2017/05/Cornerstone-Berkeley15.jpg"} alt="Restaurant" />
+                    <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={"https://lh5.googleusercontent.com/p/AF1QipOrwWBES9B0t2hzBN8HOg8jITdWKVN8G8qweDpm=w203-h135-k-no"} alt="Restaurant" />
                     <div className="card-body">
                     <h5 className="card-title">{"Delage"}</h5>
                     <p className="card-text text-center">Rating: {"4.5/5"}</p>
