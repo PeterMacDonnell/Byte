@@ -6,8 +6,9 @@ export default class roomPage extends React.Component{
     return(
     <Container>
         <Row>
-            <Col size="12">
-                <div className="card wholecard" style={{width: '18rem', height: '30rem'}}>
+            <Col size="4"/>
+            <Col size="4">
+                <div className="card wholecard" style={{width: '18rem', height: '40rem'}}>
                     <img className="card-img-top" style={{width: '18rem', height: '30rem'}} src={"https://www.cornerstoneberkeley.com/files/2017/05/Cornerstone-Berkeley15.jpg"} alt="Restaurant" />
                     <div className="card-body">
                     <h5 className="card-title">{"Delage"}</h5>
@@ -21,6 +22,7 @@ export default class roomPage extends React.Component{
                     </div>
                 </div>
             </Col>
+            <Col size="4"/>
         </Row>
     </Container>
     )}
