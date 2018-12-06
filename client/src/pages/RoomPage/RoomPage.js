@@ -14,8 +14,6 @@ class RoomPage extends React.Component {
       place_id: [],
       detailedArray: [],
       places_review: [],
-      crystalsFavoriteCoffee: 'starbucks',
-      // roomNumber: [],
     }
 
   generateRoomNumber () {
