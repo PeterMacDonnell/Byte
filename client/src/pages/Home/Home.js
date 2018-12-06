@@ -22,6 +22,7 @@ export default class Home extends React.Component {
     this.setState({ value: e.target.value });
   }
 
+
   render() {
     return (
       <div>
