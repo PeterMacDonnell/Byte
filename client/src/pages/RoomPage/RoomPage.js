@@ -16,7 +16,7 @@ class RoomPage extends React.Component {
       place_id: [],
       detailedArray: [],
       places_review: [],
-      
+      roomNumber:"",
     }
 
   generateRoomNumber () {
@@ -24,13 +24,14 @@ class RoomPage extends React.Component {
     // return roomNumber
     console.log('rn',roomNumber)
     const db = firebase.firestore();
-    let data = {
-      individulRoomNumber: roomNumber,
+    const data = {
+      roomNumber: roomNumber,
       };
      console.log('data', data)
       // Add a new document in collection "rooms" with ID 'roomNumber'
-     const setDoc = db.collection('rooms').doc('roomNumber').set(data)
-  };
+     const setDoc = db.collection('rooms').doc(`${roomNumber}`).set(data)
+     this.setState ({ roomNumber: roomNumber });
+    }
 
   api_call_function () {
     const food_input = "restaurants";
@@ -77,7 +78,7 @@ class RoomPage extends React.Component {
       // <Redirect to='/match'  />
       this.props.history.push('/match');
     }
-
+console.log()
     // official advanced method
     // this.setState((prevState) => {
     //   const oldDetailedArray = prevState.detailedArray;
@@ -86,19 +87,20 @@ class RoomPage extends React.Component {
     //     detailedArray: newDetailedArray,
     //   };
     // });
-
+    const roomNumber = this.state.roomNumber.toString()
+ 
     // FIREBASE SECTION
   const db = firebase.firestore();
-  let colRef = db.collection('rooms')
+  let colRef = db.collection('rooms').doc(roomNumber).add({
+    place: place.id,
+  })
 
 /// Batch Thing //
-  const batch = db.batch();
-
-// const detailedArray = this.statedetailedArray
-  let ref = colRef.doc(`${place.id}`)
-  batch.set(ref, {
-    vote: `${vote}`,
-  })
+const batch = db.batch();
+let ref = colRef.doc(roomNumber).collection(place.id)
+batch.set(ref, {
+  vote: `${vote}`,
+})
 
 return batch.commit()
   .then(data => {
@@ -163,7 +165,9 @@ db.collection('rooms').get()
     //     console.log(error);
     //   });
     // }
-
+    componentWillMount(){
+      this.generateRoomNumber();
+    }
 
   componentDidMount() {
     this.api_call_function();
