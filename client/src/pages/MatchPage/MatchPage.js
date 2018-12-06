@@ -6,12 +6,13 @@ export default class roomPage extends React.Component{
     return(
     <Container>
         <Row>
-            <Col size="2"/>
+            <Col size="4"/>
             <Col size="4" style= {{}}>
-                <div className="card wholecard" style={{ width: '55rem', height: '40rem'}}>
-                    <img className="card-img-top" style={{width: '100%', height: '100rem'}} src={"https://i.imgur.com/4KRisDz.png"} alt="Restaurant" />
+                <div className="card wholecard" style={{ width: '18rem', height: '25rem'}}>
+                    <img className="card-img-top" style={{width: '18rem', height: '25rem'}} src={"https://i.imgur.com/4KRisDz.png"} alt="Restaurant" />
                     <div className="card-body">
-                    <h5 className="card-title">Thanks for using Byte! A match will be up shortly.</h5>
+                    <h5 className="card-title">Thanks for using The Byte App! A match will be up shortly.</h5>
+
                     {/* <form action="" className="btn btn-success" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
                     <form action="" className="btn btn-success" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form> */}
                     </div>
