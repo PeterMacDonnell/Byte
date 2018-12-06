@@ -16,7 +16,7 @@ import Modal from "./Components/Modal/Modal.js";
 
 
 const App = () => (
-  <DocumentTitle title="Byte App">
+  <DocumentTitle title="The Byte App">
   <Grid>
     <Router>
       <div>
