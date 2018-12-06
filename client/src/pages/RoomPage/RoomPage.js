@@ -71,7 +71,10 @@ console.log('place',place, 'vote', vote, 'index', index)
     const newDetailedArray = oldDetailedArray.slice(0, index).concat(oldDetailedArray.slice(index + 1));
     this.setState({detailedArray: newDetailedArray});
     if (newDetailedArray == 0){
-      alert('thanks!')
+      // alert('thanks!')
+      // <Route path="/match" component={Matchpage}/>
+      // <Redirect to='/match'  />
+      this.props.history.push('/match');
     }
 
     // official advanced method
