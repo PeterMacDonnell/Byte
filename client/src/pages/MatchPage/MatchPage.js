@@ -1,7 +1,41 @@
-     import React, { Component } from "react";
 import {Col, Container, Row} from '../../Components/Grid/index';
+import React from "react";
+import axios from "axios";
+import 'firebase/firestore';
+import firebase from 'firebase/app';
 
 export default class roomPage extends React.Component{
+
+    state = {
+        matchArray: [],
+    }
+// *******GET REQUEST SNAPSHOT
+componentDidMount(){
+    // this.getSnapshotBeforeUpdate();
+}
+
+getSnapshot(){
+
+const db = firebase.firestore();
+db.collection('rooms').get()
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+    //   const matchArray = {
+    //         place_id: doc.id,
+    //         vote: doc.data(),
+        }
+    //   console.log(doc.id, '=>', doc.data());
+      console.log('ma', matchArray);
+    //   this.setState({matchArray: matchArray});
+    });
+  
+  .catch((err) => {
+    console.log('Error getting documents', err);
+
+})
+  });
+  
+}
     render() {
     return(
     <Container>
@@ -16,8 +50,6 @@ export default class roomPage extends React.Component{
                     <p className="card-text text-center">Phone: {"(510) 214-8600"}</p>
                     <p className="card-text text-center">Address: {"2367 Shattuck Ave, Berkeley, CA 94704"}</p>
                     <p className="card-text text-center">Reviews: {"Very cool venue for music. Great lighting & acoustics. Perfect size allowing for great interaction between artist and audience. Will definitely be going to more shows here 💯😎"}</p>
-                    {/* <form action="" className="btn btn-success" method="post"> <button name="Yes" id={place.place_id} value="1">Yes</button></form>
-                    <form action="" className="btn btn-success" method="post"> <button name="No" id={place.place_id}  value="0">No</button></form> */}
                     </div>
                 </div>
             </Col>

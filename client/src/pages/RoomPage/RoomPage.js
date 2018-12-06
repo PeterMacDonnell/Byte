@@ -7,8 +7,6 @@ import 'firebase/firestore';
 import firebase from 'firebase/app';
 
 
-
-
 class RoomPage extends React.Component {
 
    state = {
@@ -31,7 +29,7 @@ class RoomPage extends React.Component {
      console.log('data', data)
       // Add a new document in collection "rooms" with ID 'roomNumber'
      const setDoc = db.collection('rooms').doc('roomNumber').set(data)
-  };
+  }
 
   api_call_function () {
     const food_input = "restaurants";
@@ -59,15 +57,15 @@ class RoomPage extends React.Component {
         place_holder.push(res.data.result)
         this.setState({detailedArray: place_holder});
      
-        })
-      })
-    };
+        });
+      });
+    }
 
     
 
   addVotes = (place, vote, index) => {
-    // REMOVE CARD FROM PAGE:
-console.log('place',place, 'vote', vote, 'index', index)
+  // REMOVE CARD FROM PAGE:
+    console.log('place',place, 'vote', vote, 'index', index)
     // traditional method
     const oldDetailedArray = this.state.detailedArray;
     const newDetailedArray = oldDetailedArray.slice(0, index).concat(oldDetailedArray.slice(index + 1));
@@ -112,66 +110,12 @@ return batch.commit()
   // const id = place.id; // "f716a951b4294c0b03a97d4ae1414408dc254ad3"
   // const vote = place.vote; // 'yes' or 'no'
 
-
-
-//GET REQUEST SNAPSHOT
-db.collection('rooms').get()
-  .then((snapshot) => {
-    snapshot.forEach((doc) => {
-      console.log(doc.id, '=>', doc.data());
-      console.log('ss', snapshot)
-    });
-  })
-  .catch((err) => {
-    console.log('Error getting documents', err);
-  });
-
-// const voteRef = db.collection('places_id').doc('vote');
-// const transaction = db.runTransaction(t => {
-//   return t.get(voteRef)
-//     .then(doc => {
-//       const id = id;
-//       const newVote = doc.data().vote + vote;
-//       if (newVote <= 1000000) {
-//         t.update(voteRef, {vote: newVote});
-//         return Promise.resolve('vote increased to ' + newVote);
-//       } else {
-//         return Promise.reject('Sorry! vote is too big.');
-//       }
-//     });
-// }).then(result => {
-//   console.log('Transaction success', result);
-// }).catch(err => {
-//   console.log('Transaction failure:', err);
-// });
-  
-
 };
-
-
-  
-
- 
-
-     // axios post request, not sure what we would be sending over
-    //  yesAndNo(){
-    //   axios.post('/room' {
-    //     key: value,
-    //     key: value
-    //   }).then(function(response){
-    //     console.log(response);
-    //   }).catch(function(error){
-    //     console.log(error);
-    //   });
-    // }
-
 
   componentDidMount() {
     this.api_call_function();
    
   }
-
-
 
   render() {
     
@@ -204,7 +148,7 @@ db.collection('rooms').get()
               ))}
            </Row>
           </Container>
-              </div>
+        </div>
       </div>
     )
   }
