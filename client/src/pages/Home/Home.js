@@ -12,7 +12,8 @@ import { Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 export default class Home extends React.Component {
 
   state = {
-    value: [],
+    name: [],
+    number:[],
   }
  
   createRoom() {
@@ -21,6 +22,7 @@ export default class Home extends React.Component {
   handleChange = e => {
     this.setState({ value: e.target.value });
   }
+
 
 
   render() {
@@ -47,7 +49,7 @@ export default class Home extends React.Component {
                     >
                       <FormControl
                         type="text"
-                        value={this.state.value}
+                        name={this.state.value}
                         placeholder="Enter your name"
                         onChange={this.handleChange}
                       />
@@ -64,7 +66,7 @@ export default class Home extends React.Component {
                     <FormGroup controlId="homePage">
                       <FormControl
                         type="text"
-                        value={this.state.value}
+                        number={this.state.value}
                         placeholder="Enter Room Code"
                         onChange={this.handleChange}
                         // validationState={this.getValidationState()}
